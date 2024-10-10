@@ -1,0 +1,171 @@
+/* Basic reset */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #c1be1b;
+}
+
+/* Centering the confined-text div */
+.confined-text {
+    max-width: 800px;                  /* Maximum width for the box */
+    width: 100%;                       /* Full width up to max-width */
+    margin: 20px auto;                 /* Center horizontally and add margin */
+    padding: 20px;                     /* Add padding inside the box */
+    background-color: white;           /* Background color for visibility */
+    text-align: left;                /* Center the text */
+    border: 1px solid #ccc;            /* Optional: border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Optional: Make buttons inline-block to behave more consistently */
+.confined-text a.nav-button,
+.confined-text button {
+    display: inline-block;             /* Ensure buttons and links behave like inline-block */
+}
+
+/* Custom font face */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/fonts/MyCustomFont.woff2') format('woff2'),
+         url('/fonts/MyCustomFont.woff') format('woff'),
+         url('/fonts/MyCustomFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    font-family: 'Wittgenstein', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+}
+
+p, li {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Button styles */
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-top: 20px;
+    font-family: 'Wittgenstein', sans-serif;
+    font-weight: 700;
+}
+
+header div {
+    margin-top: 10px;
+}
+
+img.center-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+nav a.nav-button {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav a.nav-button:hover {
+    background-color: #a2971d;
+}
+
+/* Dropdown Menu */
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block; /* Keeps the dropdown button inline */
+    text-align: center; /* Centers the dropdown button */
+    margin-top: 20px; /* Optional: Adjust space above dropdown */
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: #4CAF50; /* Green background for button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 50%; /* Align the dropdown content horizontally */
+    transform: translateX(-50%); /* Adjust content to fully center */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 5px; /* Add rounded corners */
+    text-align: center; /* Center the text inside the dropdown */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover or click */
+.dropdown:hover .dropdown-content {
+    display: block; /* Shows the dropdown content when hovering over the dropdown container */
+}

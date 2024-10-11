@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the Diocesan Youth Council for any inquiries or information.">
+    <title>Contact Us - DYC</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Wittgenstein:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="contact-title">Contact Us</h1>
+        <p>If you have any questions, suggestions, or need more information about the Diocesan Youth Council, feel free to reach out to us!</p>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <form action="submit-form.php" method="post"> <!-- You can change the action to your form handler -->
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+
+                <button type="submit" class="nav-button">Send Message</button>
+            </form>
+        </section>
+
+        <section class="contact-info">
+            <h2>Our Contact Information</h2>
+            <p><strong>Email:</strong> dyc@yourdomain.com</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Address:</strong> 123 Church St, Hometown, NC, 12345</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Diocesan Youth Council</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

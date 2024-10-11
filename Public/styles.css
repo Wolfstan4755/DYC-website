@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #333;
-    background-color: #c1be1b;
+    background-color: #e21e1e;
 }
 
 /* Centering the confined-text div */
@@ -118,7 +118,7 @@ nav a.nav-button:hover {
 }
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #e7ff48;
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -129,7 +129,7 @@ nav a.nav-button:hover {
 }
 
 .dropbtn:hover {
-    background-color: #45a049;
+    background-color: #eeffef;
 }
 
 .dropdown-content {

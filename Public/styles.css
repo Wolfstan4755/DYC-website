@@ -184,3 +184,14 @@ nav a.nav-button:hover {
         font-size: 14px;
     }
 }
+
+.button-style {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 10px;
+}

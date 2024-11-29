@@ -1,41 +1,35 @@
 /* Basic reset */
+:root {
+    --primary-color: #e21e1e; /* Red */
+    --secondary-color: white; /* White */
+    --button-color: #9d9921; /* Button color */
+    --button-hover-color: #a2971d; /* Button hover color */
+    --text-color: #333; /* Text color */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow color */
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    color: #333;
-    background-color: #e21e1e;
+    color: var(--text-color);
+    background-color: var(--primary-color);
 }
 
 /* Centering the confined-text div */
 .confined-text {
-    max-width: 800px; /* Maximum width for the box */
-    width: 100%; /* Full width up to max-width */
-    margin: 20px auto; /* Center horizontally and add margin */
-    padding: 20px; /* Add padding inside the box */
-    background-color: white; /* Background color for visibility */
-    text-align: center; /* Left-align the text for a clean layout */
-    border: 1px solid #ccc; /* Optional: border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    border-radius: 10px; /* Rounded corners for a smoother look */
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border-radius: 12px; /* Slightly more rounded corners */
 }
 
-/* Optional: Make buttons inline-block to behave more consistently */
-.confined-text a.nav-button,
-.confined-text button {
-    display: inline-block; /* Ensure buttons and links behave like inline-block */
-}
-
-/* Custom font face */
-@font-face {
-    font-family: 'MyCustomFont';
-    src: url('/fonts/MyCustomFont.woff2') format('woff2'),
-         url('/fonts/MyCustomFont.woff') format('woff'),
-         url('/fonts/MyCustomFont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* Headings */
 h1, h2, h3 {
     font-family: 'Wittgenstein', sans-serif;
     font-weight: 700;
@@ -43,23 +37,31 @@ h1, h2, h3 {
     margin-top: 40px;
 }
 
+/* Paragraph and list styles */
 p, li {
     font-weight: 400;
     line-height: 1.6;
 }
 
 /* Button styles */
-button {
-    padding: 10px 15px;
+button, .nav-button {
+    padding: 10px 20px;
     margin-top: 10px;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
-    background-color: #9d9921;
-    color: white;
-    transition: background-color 0.3s;
+    border-radius: 8px; /* More rounded */
+    background-color: var(--button-color);
+    color: var(--secondary-color);
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for a nice effect */
 }
 
+button:hover, .nav-button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Header styles */
 header {
     text-align: center;
     padding: 20px;
@@ -71,49 +73,36 @@ header img {
 
 header h1 {
     margin-top: 20px;
-    font-family: 'Wittgenstein', sans-serif;
-    font-weight: 700;
 }
 
-header div {
-    margin-top: 10px;
-}
-
-img.center-image {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    height: auto;
-}
+/* Image styles */
 img {
     max-width: 100%;
     height: auto;
     border: 2px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    border-radius: 12px; /* More rounded */
+    box-shadow: 0px 4px 12px var(--shadow-color);
+}
 
+/* Navigation styles */
 nav {
     margin-bottom: 20px;
     text-align: center;
 }
 
 nav a.nav-button {
-    background-color: #9d9921;
-    color: white;
     padding: 10px 20px;
     margin: 5px;
-    border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 nav a.nav-button:hover {
-    background-color: #a2971d;
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
 }
 
 /* Dropdown Menu */
@@ -125,18 +114,19 @@ nav a.nav-button:hover {
 }
 
 .dropbtn {
-    background-color: #9d9921;
-    color: white;
+    background-color: var(--button-color);
+    color: var(--secondary-color);
     padding: 10px 20px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .dropbtn:hover {
-    background-color: #eeffef;
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
 }
 
 .dropdown-content {
@@ -144,54 +134,9 @@ nav a.nav-button:hover {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #f9f9f9;
+    background-color: var(--secondary-color);
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0px 8px 16px var(--shadow-color);
     z-index: 1;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Additional mobile responsive adjustments */
-@media (max-width: 768px) {
-    .confined-text {
-        padding: 15px;
+    border-radius: 8
     }
-
-    nav a.nav-button {
-        padding: 8px 15px;
-        margin: 3px;
-        font-size: 14px;
-    }
-
-    button, .dropbtn {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-}
-
-.button-style {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    display: inline-block;
-    margin: 10px;
-}

@@ -11,30 +11,26 @@
     </head>  
 <body>
     <header>
-        <div class="full-width-container">
-            <div class="full-width-header">
-                <h1 id="welcome">Welcome to the DYC</h1>
-                <h1 id="welcome">Rescued</h1>
+        <div class="confined-text">
+            <h1 id="welcome">Welcome to the DYC Website!</h1>
+        </div>
+        <img src="images/DYC.jpeg" alt="The Two Hearts" width="500" height="400">
+        <div class="confined-text">
+            This site is going to be used for DYC Diocesan Youth Council, covering what we do.
+            Click these buttons to explore different pages:
+        </div>
+        <nav class="confined-text">
+            <a href="Talks.html" class="nav-button" aria-label="Talks Page">Talks</a>
+            <a href="Rules.html" class="nav-button" aria-label="Rules Page">Rules</a>
+            <a href="Social media.html" class="nav-button" aria-label="Social Media Page">Social Media</a>
+            <a href="map.html" class="nav-button" aria-label="Map Page">Map</a>
+        </nav>
+        <div class="dropdown confined-text">
+            <button class="dropbtn" onclick="toggleDropdown()">More Information</button>
+            <div class="dropdown-content" id="dropdown-content">
+                <a href="events.html" aria-label="Upcoming Events">Upcoming Events</a>
+                <a href="contact.html" aria-label="Evaluations">Evaluations</a>
             </div>
-            <img src="images/a stained glass.png" alt="The Two Hearts" width="600" height="650" style="display: block; margin: 0 auto;">
-                <div class="confined-text">
-                    <div>
-                        <p>This site is going to be used for the Diocesan Youth Council, covering what we do. Click these buttons to explore different pages and the parts down below</p>
-                    </div>
-                    <nav>
-                        <a href="Talks.html" class="nav-button">Talks</a>
-                        <a href="map.html" class="nav-button">Map</a>
-                        <a href="events.html" class="nav-button">Upcoming Events</a>
-                    </nav>
-                    
-                    <div class="button-container">
-                        <button onclick="location.href='#Home'">Home</button>
-                        <button onclick="location.href='#rules'">Rules</button>
-                        <button onclick="location.href='#social-media'">Social Media</button>
-                        <button onclick="location.href='#Evaluations'">Evaluations</button>
-                    </div>
-                                     
-                </div>
         </div>
     </header>
 

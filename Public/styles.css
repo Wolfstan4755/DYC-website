@@ -395,22 +395,13 @@ footer {
 =======
 
 .location-list {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove default padding */
+    list-style-type: disc; /* or any other type of bullet */
+    padding-left: 0; /* Remove default padding */
 }
 
 .location-list li {
-    position: relative; /* Position relative for the pseudo-element */
-    padding-left: 20px; /* Space for the custom bullet */
-}
-
-.location-list li::before {
-    content: '•'; /* Custom bullet character */
-    position: absolute; /* Position it absolutely */
-    left: 0; /* Align it to the left */
-    color: black; /* Bullet color */
-    font-size: 20px; /* Bullet size */
-    line-height: 1; /* Adjust line height if needed */
+    padding-left: 10px; /* Adjust this value to move the text closer to the bullet */
+    margin: 0; /* Remove any default margin */
 }
 
 .center-text {

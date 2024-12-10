@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #007bff; /* Header background color */
+    background-color: #ff0800; /* Header background color */
     color: white;
     padding: 20px;
     text-align: center;
@@ -32,7 +32,7 @@ main {
 
 h1, h2 {
     text-align: center; /* Center text */
-    color: #4CAF50; /* Green color for headings */
+    color: #8c7d32; /* Green color for headings */
 }
 
 p {
@@ -48,7 +48,7 @@ nav {
 .nav-button {
     margin: 0 10px; /* Space between buttons */
     padding: 10px 20px; /* Padding for buttons */
-    background-color: #4CAF50; /* Button background color */
+    background-color: #8c7d32; /* Button background color */
     color: white; /* Button text color */
     text-decoration: none; /* Remove underline */
     border-radius: 5px; /* Rounded corners */
@@ -56,7 +56,7 @@ nav {
 }
 
 .nav-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #8c7d32; /* Darker green on hover */
 }
 
 .dropdown {
@@ -67,7 +67,7 @@ nav {
 }
 
 .dropbtn {
-    background-color: #4CAF50; /* Green background */
+    background-color: #ff0800; /* Green background */
     color: white; /* White text */
     padding: 10px 20px; /* Padding */
     font-size: 16px; /* Font size */
@@ -78,7 +78,7 @@ nav {
 }
 
 .dropbtn:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #8d0101; /* Darker red on hover */
 }
 
 .dropdown-content {

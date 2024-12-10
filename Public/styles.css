@@ -85,6 +85,7 @@ nav {
 .dropdown {
     position: relative; /* Position relative for absolute positioning of dropdown content */
     display: inline-block; /* Allow it to sit inline with other elements */
+<<<<<<< HEAD
     text-align: center; /* Center the dropdown button */
     margin: 20px auto; /* Center the dropdown */
 }
@@ -115,3 +116,35 @@ nav {
     z-index: 1;
     border-radius: 8px;
     }
+=======
+}
+
+.dropbtn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px; /* Padding */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it below the button */
+    background-color: white; /* Background color */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+.dropdown-content a {
+    color: black; /* Text color */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* No underline */
+    display: block; /* Block display */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Change background on hover */
+}
+>>>>>>> 1ea482a (add to fix the drop down)

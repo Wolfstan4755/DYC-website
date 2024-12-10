@@ -1,147 +1,34 @@
-/* Basic reset */
-:root {
-    --primary-color: #e21e1e; /* Red */
-    --secondary-color: white; /* White */
-    --button-color: #9d9921; /* Button color */
-    --button-hover-color: #a2971d; /* Button hover color */
-    --text-color: #333; /* Text color */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow color */
-}
-
+/* Reset some default styles */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: var(--text-color);
-    background-color: var(--primary-color);
+    font-family: Arial, sans-serif; /* Set a default font */
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark text color */
 }
 
 .full-width-container {
-    width: 100%; /* Full width */
-    background-color: var(--background-color); /* Optional: Set a background color */
-}
-
-/* Centering the confined-text div */
-.confined-text {
-    max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--secondary-color);
-    text-align: center;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 12px var(--shadow-color);
-    border-radius: 12px; /* Slightly more rounded corners */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    background-color: white; /* White background for content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
-/* Headings */
-h1, h2, h3 {
-    font-family: 'Wittgenstein', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 40px;
+h1, h2, p {
+    text-align: center; /* Center text */
 }
 
-/* Paragraph and list styles */
-p, li {
-    font-weight: 400;
-    line-height: 1.6;
-}
-
-/* Button styles */
-button, .nav-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 8px; /* More rounded */
-    background-color: var(--button-color);
-    color: var(--secondary-color);
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s; /* Added transform for a nice effect */
-}
-
-button:hover, .nav-button:hover {
-    background-color: var(--button-hover-color);
-    transform: translateY(-2px); /* Slight lift on hover */
-}
-
-/* Header styles */
-header {
-    text-align: center;
-    padding: 20px;
-}
-
-header img {
-    margin-bottom: 20px;
-}
-
-header h1 {
-    margin-top: 20px;
-}
-
-/* Image styles */
-img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ddd;
-    border-radius: 12px; /* More rounded */
-    box-shadow: 0px 4px 12px var(--shadow-color);
-}
-
-/* Navigation styles */
 nav {
-    margin-bottom: 20px;
-    text-align: center;
+    text-align: center; /* Center navigation links */
+    margin: 20px 0; /* Add some margin */
 }
 
-nav a.nav-button {
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-nav a.nav-button:hover {
-    background-color: var(--button-hover-color);
-    transform: translateY(-2px);
-}
-
-/* Dropdown Menu */
-.dropdown {
-    position: relative; /* Position relative for absolute positioning of dropdown content */
-    display: inline-block; /* Allow it to sit inline with other elements */
-}
-
-.dropbtn {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 10px; /* Padding */
-    font-size: 16px; /* Font size */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-.dropdown-content {
-    display: none; /* Hidden by default */
-    position: absolute; /* Position it below the button */
-    background-color: white; /* Background color */
-    min-width: 160px; /* Minimum width */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow */
-    z-index: 1; /* Ensure it appears above other content */
-}
-
-.dropdown-content a {
-    color: black; /* Text color */
-    padding: 12px 16px; /* Padding */
-    text-decoration: none; /* No underline */
-    display: block; /* Block display */
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1; /* Change background on hover */
+.nav-button {
+    margin: 0 10px; /* Space between buttons */
+    padding: 10px 15px; /* Padding for buttons */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
 }

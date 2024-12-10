@@ -3,56 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Connect with the Diocesan Youth Council on social media.">
-    <title>Connect with Us on Social Media - DYC</title>
+    <title>DYC Website</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Wittgenstein:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="full-width-container">
-        <h1 id="social-media-title">Connect with Us on Social Media</h1>
-        <p>Stay updated and engage with the Diocesan Youth Council through our social media channels!</p>
+    <header>
+        <div class="full-width-container">
+            <h1 id="welcome">Welcome to the DYC Website!</h1>
+            <img src="images/DYC.jpeg" alt="The Two Hearts" width="500" height="400" style="display: block; margin: 0 auto;">
+            <p>This site is going to be used for the Diocesan Youth Council, covering what we do. Click these buttons to explore different pages:</p>
+            <nav>
+                <a href="Talks.html" class="nav-button">Talks</a>
+                <a href="Rules.html" class="nav-button">Rules</a>
+                <a href="Social media.html" class="nav-button">Social Media</a>
+                <a href="map.html" class="nav-button">Map</a>
+            </nav>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown()">More Information</button>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="events.html">Upcoming Events</a>
+                    <a href="contact.html">Evaluations</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main class="full-width-container">
-        <section class="social-media-links">
-            <h2>Follow Us</h2>
-            <p>Join our community on the following platforms:</p>
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/cltdiocesanyouth/profilecard/?igsh=NHJuZWc1NzNueTV3" target="_blank" class="button-style">
-                        Instagram
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/" target="_blank" class="button-style">
-                        YouTube
-                    </a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="guidelines">
-            <h2>Guidelines for Engagement</h2>
-            <p>We encourage all members and followers to engage with us positively and respectfully. Please adhere to the following guidelines:</p>
-            <ul>
-                <li><strong>Be Respectful:</strong> Treat others with kindness and respect in all interactions.</li>
-                <li><strong>Stay on Topic:</strong> Keep discussions relevant to faith, youth engagement, and DYC activities.</li>
-                <li><strong>Share Positivity:</strong> Share uplifting content that reflects our values and mission.</li>
-                <li><strong>Report Concerns:</strong> If you see something inappropriate, report it to a DYC leader immediately.</li>
-            </ul>
-        </section>
-
-        <section class="get-involved">
-            <h2>Get Involved!</h2>
-            <p>Want to share your experiences or events with us? Use the hashtag <strong>#DYCYouth</strong> to join the conversation. We love to see your stories and how you are living out your faith!</p>
-        </section>
+    <main>
+        <div class="full-width-container">
+            <h2>Mission Statement</h2>
+            <p>“The mission of the Diocesan Youth Conference in 2025 is to inspire the youth of the diocese to develop a personal relationship with God, to solidify their moral values and character, and to lead them to a deeper understanding of what it means to be rescued by our Savior, Jesus Christ.”</p>
+            <h2>Conference Prayer</h2>
+            <p><!-- Add your conference prayer here --></p>
+            <h2>Service Project</h2>
+            <p>What is the service project?</p>
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </main>
 
-    <footer class="full-width-container">
-        <p>&copy; 2024 Diocesan Youth Council</p>
+    <footer>
+        <div class="full-width-container">
+            <p>&copy; 2024 Diocesan Youth Council. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>

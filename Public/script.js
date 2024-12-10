@@ -4,6 +4,6 @@ function toggleDropdown() {
     if (dropdownContent.style.display === "block") {
         dropdownContent.style.display = "none"; // Hide the dropdown
     } else {
-        dropdownContent.style.display = "block"; // Show the dropdown
+        dropdownContent.style.display = "show"; // Show the dropdown
     }
 }

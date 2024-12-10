@@ -160,7 +160,7 @@ footer {
 
 .location-list li {
     padding-left: 10px; /* Adjust this value to move the text closer to the bullet */
-    margin: 0; /* Remove any default margin */
+    margin: 30; /* Remove any default margin */
 }
 
 .center-text {

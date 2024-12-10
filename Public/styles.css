@@ -390,4 +390,16 @@ footer {
     width: 100%; /* Allow it to be responsive */
     height: auto; /* Maintains aspect ratio */
 }
+<<<<<<< HEAD
 >>>>>>> 8e3d6a7 (map size 2)
+=======
+
+.location-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.center-text {
+    text-align: center; /* Center the text */
+}
+>>>>>>> 85792f3 (add center-text)

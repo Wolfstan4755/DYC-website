@@ -118,4 +118,41 @@ footer {
     position: relative; /* Position relative for footer */
     bottom: 0; /* Stick to the bottom */
     width: 100%; /* Full width */
+<<<<<<< HEAD
 }
+=======
+}
+
+.event-card {
+    background-color: white; /* Card background */
+    border: 1px solid #ddd; /* Card border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px;
+    margin-bottom: 20px; /* Space between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.event-title {
+    font-size: 1.5em; /* Larger font for event title */
+    margin: 0 0 10px; /* Space below title */
+}
+
+.event-date {
+    color: #6c757d; /* Grey color for date */
+    margin-bottom: 10px; /* Space below date */
+}
+
+.button-style {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Space above button */
+}
+
+.button-style:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+>>>>>>> c221c2c (fodzsjfosd)

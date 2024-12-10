@@ -138,7 +138,7 @@ nav a.nav-button:hover {
     min-width: 160px;
     box-shadow: 0px 8px 16px var(--shadow-color);
     z-index: 1;
-    border-radius: 8
+    border-radius: 8px;
     }
 
     .dropdown-content.show {

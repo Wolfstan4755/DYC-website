@@ -10,8 +10,8 @@
     <header>
         <div class="full-width-container">
             <h1 id="welcome">Welcome to the DYC Website!</h1>
-            <img src="images/DYC.jpeg" alt="The Two Hearts" width="500" height="400">
-            <p>This site is going to be used for DYC Diocesan Youth Council, covering what we do. Click these buttons to explore different pages:</p>
+            <img src="images/DYC.jpeg" alt="The Two Hearts" width="500" height="400" style="display: block; margin: 0 auto;">
+            <p>This site is going to be used for the Diocesan Youth Council, covering what we do. Click these buttons to explore different pages:</p>
             <nav>
                 <a href="Talks.html" class="nav-button">Talks</a>
                 <a href="Rules.html" class="nav-button">Rules</a>
@@ -19,7 +19,7 @@
                 <a href="map.html" class="nav-button">Map</a>
             </nav>
             <div class="dropdown">
-                <button class="dropbtn" onclick="toggleDropdown()">More information</button>
+                <button class="dropbtn" onclick="toggleDropdown()">More Information</button>
                 <div class="dropdown-content" id="dropdownContent">
                     <a href="events.html">Upcoming Events</a>
                     <a href="contact.html">Evaluations</a>
@@ -37,7 +37,7 @@
             <h2>Service Project</h2>
             <p>What is the service project?</p>
             <h2>Contact Us</h2>
-            <form id="contact-form">
+            <form id="contact-form" action="#" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email:</label>
@@ -51,9 +51,10 @@
 
     <footer>
         <div class="full-width-container">
-            <p>&copy; 202</p>
+            <p>&copy; 2023 Diocesan Youth Council. All rights reserved.</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>

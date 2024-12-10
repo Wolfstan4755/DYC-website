@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 function toggleDropdown() {
     var dropdownContent = document.getElementById("dropdownContent");
+=======
+// script.js
+function toggleDropdown() {
+    var dropdownContent = document.getElementById("dropdown-content");
+>>>>>>> 394079c (add js)
     if (dropdownContent.style.display === "block") {
         dropdownContent.style.display = "none"; // Hide the dropdown
     } else {
         dropdownContent.style.display = "block"; // Show the dropdown
     }
+<<<<<<< HEAD
 }
 
 // Optional: Close the dropdown if the user clicks outside of it
@@ -18,4 +25,6 @@ window.onclick = function(event) {
             }
         }
     }
+=======
+>>>>>>> 394079c (add js)
 }

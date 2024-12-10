@@ -3,8 +3,21 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    background-color: #f4f4f4; /* Light gray background */
+    background-color: #e9ecef; /* Light gray background for the body */
     color: #333; /* Dark text color */
+}
+
+header {
+    background-color: #007bff; /* Header background color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    flex: 1; /* Allows the main content to grow and fill the available space */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for main content */
 }
 
 .full-width-container {
@@ -49,6 +62,8 @@ nav {
 .dropdown {
     position: relative; /* Position relative for absolute positioning of dropdown content */
     display: inline-block; /* Allow it to sit inline with other elements */
+    text-align: center; /* Center the dropdown button */
+    margin: 20px auto; /* Center the dropdown */
 }
 
 .dropbtn {
@@ -74,6 +89,7 @@ nav {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow */
     z-index: 1; /* Ensure it appears above other content */
     border-radius: 5px; /* Rounded corners */
+    text-align: left; /* Align text to the left */
 }
 
 .dropdown-content a {
@@ -96,4 +112,44 @@ footer {
     position: relative; /* Position relative for footer */
     bottom: 0; /* Stick to the bottom */
     width: 100%; /* Full width */
+}
+
+.event-card {
+    background-color: white; /* Card background */
+    border: 1px solid #ddd; /* Card border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px;
+    margin-bottom: 20px; /* Space between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.event-title {
+    font-size: 1.5em; /* Larger font for event title */
+    margin: 0 0 10px; /* Space below title */
+}
+
+.event-date {
+    color: #6c757d; /* Grey color for date */
+    margin-bottom: 10px; /* Space below date */
+}
+
+.button-style {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Space above button */
+}
+
+.button-style:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+footer {
+    background-color: #343a40; /* Dark background for footer */
+    color: white; /* White text for contrast */
+    padding: 10px 0;
+    text-align: center; /* Center text in footer */
 }

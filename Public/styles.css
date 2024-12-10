@@ -146,3 +146,9 @@ footer {
 .button-style:hover {
     background-color: #0056b3; /* Darker shade on hover */
 }
+
+.responsive-map {
+    max-width: 600px; /* Set a maximum width */
+    width: 100%; /* Allow it to be responsive */
+    height: auto; /* Maintains aspect ratio */
+}

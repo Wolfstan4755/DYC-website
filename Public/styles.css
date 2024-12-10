@@ -152,3 +152,12 @@ footer {
     width: 100%; /* Allow it to be responsive */
     height: auto; /* Maintains aspect ratio */
 }
+
+.location-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.center-text {
+    text-align: center; /* Center the text */
+}

@@ -246,8 +246,8 @@ body {
 }
 
 header {
-    background-color: #ff0800; /* Header background color */
-    color: white;
+    background-color: white; /* Header background color */
+    color: #ff0800;
     padding: 20px;
     text-align: center;
 }
@@ -263,7 +263,7 @@ main {
     max-width: 1200px; /* Maximum width for larger screens */
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Add some padding */
-    background-color: white; /* White background for content */
+    background-color: #ff0800; /* White background for content */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     border-radius: 8px; /* Rounded corners */
 }
@@ -345,8 +345,8 @@ nav {
 footer {
     text-align: center; /* Center footer text */
     padding: 20px; /* Padding for footer */
-    background-color: #ff0800; /* Footer background color */
-    color: white; /* Footer text color */
+    background-color: white; /* Footer background color */
+    color: #ff0800; /* Footer text color */
     position: relative; /* Position relative for footer */
     bottom: 0; /* Stick to the bottom */
     width: 100%; /* Full width */
@@ -407,4 +407,10 @@ footer {
 .center-text {
     text-align: center; /* Center the text */
 }
+<<<<<<< HEAD
 >>>>>>> 85792f3 (add center-text)
+=======
+.things {
+   text-align: center; /* Center the text */
+}
+>>>>>>> 5df8d7a (save all)

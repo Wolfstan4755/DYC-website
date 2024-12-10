@@ -140,3 +140,7 @@ nav a.nav-button:hover {
     z-index: 1;
     border-radius: 8
     }
+
+    .dropdown-content.show {
+        display: block; /* Show when toggled */
+    }

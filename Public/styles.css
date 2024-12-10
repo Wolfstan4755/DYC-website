@@ -1,122 +1,120 @@
-    /* Reset some default styles */
+/* Basic reset */
+:root {
+    --primary-color: #e21e1e; /* Red */
+    --secondary-color: white; /* White */
+    --button-color: #9d9921; /* Button color */
+    --button-hover-color: #a2971d; /* Button hover color */
+    --text-color: #333; /* Text color */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow color */
+}
+
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: var(--text-color);
     background-color: var(--primary-color);
 }
 
+.full-width-container {
+    width: 100%; /* Full width */
+    background-color: var(--background-color); /* Optional: Set a background color */
+}
+
 /* Centering the confined-text div */
 .confined-text {
-    max-width: 800px;
+    max-width: 1200px;
     width: 100%;
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 20px;
+    background-color: var(--secondary-color);
     text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border-radius: 12px; /* Slightly more rounded corners */
 }
 
-main {
-    flex: 1; /* Allows the main content to grow and fill the available space */
-    padding: 10px;
-    background-color: #ffff; /* Light background for main content */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack elements vertically */
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Wittgenstein', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
 }
 
-.full-width-container {
-    width: 100%;
-    max-width: 1200px; /* Maximum width for larger screens */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Add some padding */
-    background-color: #b0322d; /* White background for content */
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    box-sizing: border-box; /* Include padding and border in element width and height */
+/* Paragraph and list styles */
+p, li {
+    font-weight: 400;
+    line-height: 1.6;
 }
 
-.full-width-header{
-    background-color: white;
-    color: rgb(0, 0, 0);
+/* Button styles */
+button, .nav-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px; /* More rounded */
+    background-color: var(--button-color);
+    color: var(--secondary-color);
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for a nice effect */
+}
+
+button:hover, .nav-button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Header styles */
+header {
+    text-align: center;
     padding: 20px;
-    text-align: center;
 }
 
-.confined-text{
-    padding: 10px;  
-    background-color: white;
-    color:rgb(0, 0, 0);
-    border-radius: 8px;
-    box-shadow: 0 10px 10px rgba(0, 0,0, 0.1);
+header img {
+    margin-bottom: 20px;
 }
 
-h1, h2 {
-    text-align: center; /* Center text */
-    color: #8c7d32; /* Green color for headings */
-    margin: 0; /* Remove default margin */
+header h1 {
+    margin-top: 20px;
 }
 
-p {
-    text-align: center; /* Center text */
-    line-height: 1.6; /* Improve readability */
-    margin: 0; /* Remove default margin */
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 12px; /* More rounded */
+    box-shadow: 0px 4px 12px var(--shadow-color);
 }
 
+/* Navigation styles */
 nav {
-    text-align: center; /* Center navigation links */
-    margin: 20px 0; /* Add some margin */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.nav-button {
-    margin: 0 10px; /* Space between buttons */
-    padding: 10px 20px; /* Padding for buttons */
-    background-color: #8c7d32; /* Button background color */
-    color: white; /* Button text color */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    display: inline-block; /* Allow multiple buttons on the same line */
+nav a.nav-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.nav-button:hover {
-    background-color: #554b1b; /* Darker green on hover */
+nav a.nav-button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
 }
 
+/* Dropdown Menu */
 .dropdown {
     position: relative; /* Position relative for absolute positioning of dropdown content */
     display: inline-block; /* Allow it to sit inline with other elements */
-<<<<<<< HEAD
-    text-align: center; /* Center the dropdown button */
-    margin: 20px auto; /* Center the dropdown */
-}
-
-.dropbtn {
-    background-color: #8c7d32; /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding */
-    font-size: 16px; /* Font size */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.dropbtn:hover {
-    background-color: #554b1b; /* Darker red on hover */
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--secondary-color);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px var(--shadow-color);
-    z-index: 1;
-    border-radius: 8px;
-    }
-=======
 }
 
 .dropbtn {

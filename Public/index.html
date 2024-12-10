@@ -1,41 +1,22 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="The theme for the 2025 Diocesan Youth Conference.">
-        <title>Diocesan Youth Conference</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Wittgenstein:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    </head>  
-=======
->>>>>>> 1ea482a (add to fix the drop down)
 <body>
     <header>
         <div class="full-width-container">
             <div class="confined-text">
                 <h1 id="welcome">Welcome to the DYC Website!</h1>
             </div>
-<<<<<<< HEAD
-=======
             <img src="images/DYC.jpeg" alt="The Two Hearts" width="500" height="400">
-            <div class="confined-text">
-                This site is going to be used for DYC Diocesan Youth Council, covering what we do.
-                Click these buttons to explore different pages:
-            </div>
-            <nav class="confined-text">
-                <a href="Talks.html" class="nav-button" aria-label="Talks Page">Talks</a>
-                <a href="Rules.html" class="nav-button" aria-label="Rules Page">Rules</a>
-                <a href="Social media.html" class="nav-button" aria-label="Social Media Page">Social Media</a>
-                <a href="map.html" class="nav-button" aria-label="Map Page">Map</a>
+            <p>This site is going to be used for DYC Diocesan Youth Council, covering what we do. Click these buttons to explore different pages:</p>
+            <nav>
+                <a href="Talks.html" class="nav-button">Talks</a>
+                <a href="Rules.html" class="nav-button">Rules</a>
+                <a href="Social media.html" class="nav-button">Social Media</a>
+                <a href="map.html" class="nav-button">Map</a>
             </nav>
             <div class="dropdown">
-                <button class="dropbtn">More information</button>
-                <div class="dropdown-content">
-                    <a href="events.html" aria-label="Upcoming Events">Upcoming Events</a>
-                    <a href="contact.html" aria-label="Evaluations">Evaluations</a>
+                <button class="dropbtn" onclick="toggleDropdown()">More information</button>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="events.html">Upcoming Events</a>
+                    <a href="contact.html">Evaluations</a>
                 </div>
             </div>
 >>>>>>> 1ea482a (add to fix the drop down)
@@ -43,29 +24,6 @@
     </header>
 
     <main>
-<<<<<<< HEAD
-        <div class="full-width-container">
-            <div class="confined-text">
-                <section id="Home">
-                    <h2>Mission Statement</h2>
-                    <p>“The mission of the Diocesan Youth Conference in 2025 is to</p>
-                    <p>inspire the youth of the diocese to develop a personal relationship with God,</p>
-                    <p>to solidify their moral values and character, and to lead them to a deeper<p>
-                    <p>understanding of what it means to be rescued by our Savior, Jesus Christ.”</p>
-                    <h2>Conference Prayer</h2>
-                    <p>Heavenly Father, our Rescuer we cry out to You with hearts ablaze, desperate for Your saving grace.</p>
-                        <p>You have rescued us time and time again—keep us from the grip of evil, persecution, and despair</p>
-                        <p>that suffocates our lives. Shake us awake, O Lord, and remind us that only through You can we be rescued and</p>
-                        <p>find eternal joy, freedom, and union. In this conference, let us rise as those who have been</p>
-                        <p>rescued to become rescuers for others. Let us storm the gates of despair. Help us to feed the hungry,</p>
-                        <p>shelter the homeless, accompany the lonely, and rescue the lost to find their path. Through the intercession</p> 
-                        <p>of St. Bernard Menthon, who knew the urgency of rescue, with his guidance, and the strength of</p>
-                        <p>the Holy Spirit through Christ our Lord. Amen </p>
-                    <h2>Service Project</h2>
-                    <p>What is the service project?</p>
-                </section>
-            </div>
-=======
         <div class="confined-text">
             <h2>Mission Statement</h2>
             <p>“The mission of the Diocesan Youth Conference in 2025 is to inspire the youth of the diocese to develop a personal relationship with God, to solidify their moral values and character, and to lead them to a deeper understanding of what it means to be rescued by our Savior, Jesus Christ.”</p>
@@ -89,99 +47,8 @@
                 <textarea id="message" name="message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
->>>>>>> 1ea482a (add to fix the drop down)
         </div>
     </main>
-
-    <section id="rules">
-        <div class="full-width-header">
-            <h2>Rules</h2>
-            <h1 id="rules-title">DYC Guidelines and Rules</h1>
-            <p>These rules are important, please follow them so you don't forget them.</p>
-        </div>
-
-        <main class="full-width-container">
-            <div class="confined-text">
-                <section class="rules h2">
-                    <h2>Rules Video</h2>
-                </section>
-                    <section id="rules-video">
-                        <div style="text-align: center;">
-                            <div class="video-container">
-                                <iframe 
-                                    width="700" 
-                                    height="400" 
-                                    src="https://www.youtube.com/embed/Kiu6-YLlCEg" 
-                                    frameborder="0" 
-                                    allow="autoplay; encrypted-media" 
-                                    allowfullscreen>
-                                </iframe>
-                            </div>
-                        </div>
-                    </section>
-                <section id=" rules Disciplinary Actions ">
-                    <h2>Disciplinary Actions</h2>
-                    <p>Failure to comply with these rules may result in disciplinary actions, which could include warnings, temporary suspension from events, or removal from the Council depending on the severity of the violation.</p>
-                </section>
-            </div>
-        </main>
-    </section>
-
-    <section id="social-media">
-        <div class="full-width-header">
-            <h2>Social Media</h2>
-            <h1 id="social-media-title">Connect with Us on Social Media</h1>
-            <p>Stay updated and engage with the Diocesan Youth Council through our social media channels!</p>
-        </div>
-
-        <main class="full-width-container">
-            <div class="confined-text">
-                <section class="social-media-links">
-                    <h2>Follow Us</h2>
-                    <p>Join our community on the following platforms:</p>
-                    <ul class="center-text">
-                        <li>
-                            <a href="https://www.instagram.com/cltdiocesanyouth/profilecard/?igsh=NHJuZWc1NzNueTV3" target="_blank" class="button-style">
-                                Instagram
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/" target="_blank" class="button-style">
-                                YouTube
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="guidelines">
-                    <h2>Guidelines for Engagement</h2>
-                    <p>We encourage all members and followers to engage with us positively and respectfully. Please adhere to the following guidelines:</p>
-                    <ul class="center-text">
-                        <li><strong>Be Respectful:</strong> Treat others with kindness and respect in all interactions.</li>
-                        <li><strong>Stay on Topic:</strong> Keep discussions relevant to faith, youth engagement, and DYC activities.</li>
-                        <li><strong>Share Positivity:</strong> Share uplifting content that reflects our values and mission.</li>
-                        <li><strong>Report Concerns:</strong> If you see something inappropriate, report it to a DYC leader immediately.</li>
-                    </ul>
-                </section>
-                <section class="get-involved">
-                    <h2>Get Involved!</h2>
-                    <p>Want to share your experiences or events with us? Use the hashtag </p>
-                    <p><strong>#DYCYouth</strong> </p>
-                    <p>to join the conversation. We love to see your stories and how you are living out your faith!</p>
-                </section>
-            </div>
-
-        <section id="Evaluations">
-            <div class="full-width-header">
-                <h2>Evaluations</h2>
-                <h1 id="social-media-title">Connect with Us on Social Media</h1>
-                <p>If you have any questions, comments, or feedback, please don't hesitate to reach out to us. We value your input!</p>
-            </div>
-
-        <main class="full-width-container">
-            <div class="confined-text">
-                <iframe src="https://docs.google.com/forms/d/1AVaW3PXykTWT5wL465fmMCuvv8DrqH5JeUnihV_mB6Y/prefill" width="50%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>
-        </main>
 
     <footer>
 <<<<<<< HEAD
@@ -189,11 +56,8 @@
             <p>&copy; 202
 =======
         <div class="full-width-container">
-            <div class="confined-text">
-                <p>&copy; 202</p>
-            </div>
+            <p>&copy; 202</p>
         </div>
     </footer>
     <script src="script.js"></script>
 </body>
->>>>>>> 1ea482a (add to fix the drop down)

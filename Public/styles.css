@@ -255,7 +255,7 @@ header {
 main {
     flex: 1; /* Allows the main content to grow and fill the available space */
     padding: 20px;
-    background-color: #f8f9fa; /* Light background for main content */
+    background-color: white; /* Light background for main content */
 }
 
 .full-width-container {
@@ -294,7 +294,7 @@ nav {
 }
 
 .nav-button:hover {
-    background-color: #8c7d32; /* Darker green on hover */
+    background-color: #554b1b; /* Darker green on hover */
 }
 
 .dropdown {
@@ -316,7 +316,7 @@ nav {
 }
 
 .dropbtn:hover {
-    background-color: #776923; /* Darker red on hover */
+    background-color: #554b1b; /* Darker red on hover */
 }
 
 .dropdown-content {

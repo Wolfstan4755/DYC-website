@@ -413,4 +413,49 @@ footer {
 .things {
    text-align: center; /* Center the text */
 }
+<<<<<<< HEAD
 >>>>>>> 5df8d7a (save all)
+=======
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #444;
+}
+.game-text {
+    margin: 20px 0;
+}
+.choices {
+    list-style: none;
+    padding: 0;
+}
+.choices li {
+    margin: 10px 0;
+}
+.choices button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.choices button:hover {
+    background-color: #0056b3;
+}
+>>>>>>> e9f9891 (game)

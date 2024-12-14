@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>Text-Based Adventure Game: Finding St. Edmund Campion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Finding St. Edmund Campion</h1>
+        <div class="game-text" id="game-text">
+            <p>You are a young boy named Thomas living in 16th century England. Your mission is to find St. Edmund Campion, a Jesuit priest who is in hiding due to religious persecution. Your journey will be filled with challenges and choices. Choose wisely!</p>
+        </div>
+        <ul class="choices" id="choices">
+            <li><button onclick="makeChoice(1)">Start your journey</button></li>
+        </ul>
+    </div>
+
+    <script>
+        const gameText = document.getElementById('game-text');
+        const choices = document.getElementById('choices');
+
+        function makeChoice(choice) {
+            switch (choice) {
+                case 1:
+                    gameText.innerHTML = '<p>You decide to start your journey in the nearby forest where you heard rumors of Campion’s presence. The forest is dense and dark. You come across a fork in the path.</p>';
+                    choices.innerHTML = `
+                        <li><button onclick="makeChoice(2)">Take the left path</button></li>
+                        <li><button onclick="makeChoice(3)">Take the right path</button></li>
+                    `;
+                    break;
+                case 2:
+                    gameText.innerHTML = '<p>You take the left path and soon find yourself lost. The forest seems to close in around you. You hear a rustling in the bushes.</p>';
+                    choices.innerHTML = `
+                        <li><button onclick="makeChoice(4)">Investigate the noise</button></li>
+                        <li><button onclick="makeChoice(5)">Run away</button></li>
+                    `;
+                    break;
+                case 3:
+                    gameText.innerHTML = '<p>You take the right path and after a while, you find a small clearing with a hidden chapel. You see a figure praying inside.</p>';
+                    choices.innerHTML = `
+                        <li><button onclick="makeChoice(6)">Approach the figure</button></li>
+                        <li><button onclick="makeChoice(7)">Hide and observe</button></li>
+                    `;
+                    break;
+                case 4:
+                    gameText.innerHTML = '<p>You investigate the noise and find a friendly deer. However, you are still lost. You decide to backtrack to the fork in the path.</p>';
+                    choices.innerHTML = `
+                        <li><button onclick="makeChoice(1)">Back to the fork</button></li>
+                    `;
+                    break;
+                case 5:
+                    gameText.innerHTML = '<p>You run away and eventually find your way back to the fork in the path.</p>';
+                    choices.innerHTML = `
+                        <li><button onclick="makeChoice(1)">Back to the fork</button></li>
+                    `;
+                    break;
+                case 6:
+                    gameText.innerHTML = '<p>You approach the figure and realize it is St. Edmund Campion. He welcomes you and you have successfully completed your mission!</p>';
+                    choices.innerHTML = `
+                        <li><button onclick="makeChoice(8)">Play Again</button></li>
+                    `;
+                    break;
+                case 7:
+                    gameText.innerHTML = '<p>You hide and observe. After a while, the figure leaves the chapel. You decide to enter and find a note left by St. Edmund Campion with instructions to find him in another location.</p>';
+                    choices.innerHTML = `
+                        <li><button onclick="makeChoice(9)">Follow the instructions</button></li>
+                    `;
+                    break;
+                case 8:
+                    gameText.innerHTML = '<p>You are a young boy named Thomas living in 16th century England. Your mission is to find St. Edmund Campion, a Jesuit priest who is in hiding due to religious persecution. Your journey will be filled with challenges and choices. Choose wisely!</p>';
+                    choices.innerHTML = `
+                        <li><button onclick="makeChoice(1)">Start your journey</button></li>
+                    `;
+                    break;
+                case 9:
+                    gameText.innerHTML = '<p>You follow the instructions and after a long journey, you find St. Edmund Campion in a safe house. He welcomes you and you have successfully completed your mission!</p>';
+                    choices.innerHTML = `
+                        <li><button onclick="makeChoice(8)">Play Again</button></li>
+                    `;
+                    break;
+                default:
+                    gameText.innerHTML = '<p>Invalid choice. Please try again.</p>';
+                    choices.innerHTML = `
+                        <li><button onclick="makeChoice(1)">Start your journey</button></li>
+                    `;
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

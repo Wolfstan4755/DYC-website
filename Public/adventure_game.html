@@ -1,100 +1,151 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Text-Based Adventure Game: Finding St. Edmund Campion</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Search for St. Edmund Campion</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="confined-text">  
-        <nav>
-            <a href="index.html" class="nav-button">Home</a>
-        </nav>      
-        <h1>Game</h1>   
+    <header>
+        <h1>The Search for St. Edmund Campion</h1>
     </header>
-
-<main class="full-width-container">
-    <div class="container">
-        <h1>Finding St. Edmund Campion</h1>
-        <div class="game-text" id="game-text">
-            <p>You are a young boy named Thomas living in 16th century England. Your mission is to find St. Edmund Campion, a Jesuit priest who is in hiding due to religious persecution. Your journey will be filled with challenges and choices. Choose wisely!</p>
+    <main>
+        <div id="game-text">
+            <p>You are a young boy named Thomas, living in Elizabethan England. You have heard stories of the heroic Catholic priest, St. Edmund Campion, who risks his life to minister to persecuted Catholics. Determined to meet him, you embark on a dangerous journey to find this elusive priest and seek his guidance. Your choices will determine your success. Will you find St. Edmund Campion and fulfill your mission?</p>
         </div>
-        <ul class="choices" id="choices">
-            <li><button onclick="makeChoice(1)">Start your journey</button></li>
+        <ul id="choices">
+            <li><button onclick="firstChoice()">Start your journey</button></li>
         </ul>
-    </div>
+    </main>
     <script>
-        const gameText = document.getElementById('game-text');
-        const choices = document.getElementById('choices');
+        function updateGameText(text) {
+            document.getElementById('game-text').innerHTML = text;
+        }
 
-        function makeChoice(choice) {
-            switch (choice) {
-                case 1:
-                    gameText.innerHTML = '<p>You decide to start your journey in the nearby forest where you heard rumors of Campion’s presence. The forest is dense and dark. You come across a fork in the path.</p>';
-                    choices.innerHTML = `
-                        <li><button onclick="makeChoice(2)">Take the left path</button></li>
-                        <li><button onclick="makeChoice(3)">Take the right path</button></li>
-                    `;
-                    break;
-                case 2:
-                    gameText.innerHTML = '<p>You take the left path and soon find yourself lost. The forest seems to close in around you. You hear a rustling in the bushes.</p>';
-                    choices.innerHTML = `
-                        <li><button onclick="makeChoice(4)">Investigate the noise</button></li>
-                        <li><button onclick="makeChoice(5)">Run away</button></li>
-                    `;
-                    break;
-                case 3:
-                    gameText.innerHTML = '<p>You take the right path and after a while, you find a small clearing with a hidden chapel. You see a figure praying inside.</p>';
-                    choices.innerHTML = `
-                        <li><button onclick="makeChoice(6)">Approach the figure</button></li>
-                        <li>< button onclick="makeChoice(7)">Hide and observe</button></li>
-                    `;
-                    break;
-                case 4:
-                    gameText.innerHTML = '<p>You investigate the noise and find a friendly deer. However, you are still lost. You decide to backtrack to the fork in the path.</p>';
-                    choices.innerHTML = `
-                        <li><button onclick="makeChoice(1)">Back to the fork</button></li>
-                    `;
-                    break;
-                case 5:
-                    gameText.innerHTML = '<p>You run away and eventually find your way back to the fork in the path.</p>';
-                    choices.innerHTML = `
-                        <li><button onclick="makeChoice(1)">Back to the fork</button></li>
-                    `;
-                    break;
-                case 6:
-                    gameText.innerHTML = '<p>You approach the figure and realize it is St. Edmund Campion. He welcomes you and you have successfully completed your mission!</p>';
-                    choices.innerHTML = `
-                        <li><button onclick="makeChoice(8)">Play Again</button></li>
-                    `;
-                    break;
-                case 7:
-                    gameText.innerHTML = '<p>You hide and observe. After a while, the figure leaves the chapel. You decide to enter and find a note left by St. Edmund Campion with instructions to find him in another location.</p>';
-                    choices.innerHTML = `
-                        <li><button onclick="makeChoice(9)">Follow the instructions</button></li>
-                    `;
-                    break;
-                case 8:
-                    gameText.innerHTML = '<p>You are a young boy named Thomas living in 16th century England. Your mission is to find St. Edmund Campion, a Jesuit priest who is in hiding due to religious persecution. Your journey will be filled with challenges and choices. Choose wisely!</p>';
-                    choices.innerHTML = `
-                        <li><button onclick="makeChoice(1)">Start your journey</button></li>
-                    `;
-                    break;
-                case 9:
-                    gameText.innerHTML = '<p>You follow the instructions and after a long journey, you find St. Edmund Campion in a safe house. He welcomes you and you have successfully completed your mission!</p>';
-                    choices.innerHTML = `
-                        <li><button onclick="makeChoice(8)">Play Again</button></li>
-                    `;
-                    break;
-                default:
-                    gameText.innerHTML = '<p>Invalid choice. Please try again.</p>';
-                    choices.innerHTML = `
-                        <li><button onclick="makeChoice(1)">Start your journey</button></li>
-                    `;
-                    break;
-            }
+        function updateChoices(choices) {
+            const choicesList = document.getElementById('choices');
+            choicesList.innerHTML = '';
+            choices.forEach(choice => {
+                choicesList.innerHTML += `<li><button onclick="${choice.action}">${choice.text}</button></li>`;
+            });
+        }
+
+        function firstChoice() {
+            updateGameText("You overhear a secret conversation in your village about a hidden priest who will be celebrating Mass nearby. What do you do?");
+            updateChoices([
+                { text: "Approach the speaker and ask for more information.", action: "approachSpeaker()" },
+                { text: "Quietly follow them and see where they go.", action: "followSpeaker()" }
+            ]);
+        }
+
+        function approachSpeaker() {
+            updateGameText("You approach the speaker and ask about the hidden priest. They tell you to go to a farmhouse on the edge of the village after dark, but warn you to be careful of spies.");
+            farmhouseChoice();
+        }
+
+        function followSpeaker() {
+            updateGameText("You quietly follow the speaker and see them enter a secluded farmhouse. You notice guards patrolling nearby. Do you...");
+            updateChoices([
+                { text: "Try to sneak inside the farmhouse to find the priest.", action: "sneakInside()" },
+                { text: "Wait outside and watch for an opportunity to approach someone.", action: "waitOutside()" }
+            ]);
+        }
+
+        function farmhouseChoice() {
+            updateGameText("As night falls, you approach the farmhouse. You see two paths: one leads through the woods, offering cover, but might be dangerous. The other is a clear path, but it leaves you exposed. What do you do?");
+            updateChoices([
+                { text: "Take the wooded path.", action: "woodedPath()" },
+                { text: "Take the clear path.", action: "clearPath()" }
+            ]);
+        }
+
+        function sneakInside() {
+            updateGameText("You manage to sneak inside the farmhouse and find a group of Catholics preparing for Mass. A man steps forward—it is St. Edmund Campion! He greets you warmly and offers to hear your story after the Mass.");
+            finalEncounter();
+        }
+
+        function waitOutside() {
+            updateGameText("You wait outside and eventually see a group of people leaving the farmhouse. You approach a kind-looking woman who tells you the priest has gone into hiding again. Your story ends with hope but no resolution.");
+        }
+
+        function woodedPath() {
+            updateGameText("You take the wooded path and narrowly avoid a patrol of guards. You arrive at the farmhouse safely and are welcomed inside by a servant who recognizes your intentions. Inside, you finally meet St. Edmund Campion.");
+            finalEncounter();
+        }
+
+        function clearPath() {
+            updateGameText("You take the clear path but are spotted by a patrol. The guards question you, and though you manage to escape, you lose your chance to meet the priest tonight. Do you...");
+            updateChoices([
+                { text: "Return home and plan to try again another day.", action: "returnHome()" },
+                { text: "Look for another clue nearby, despite the risks.", action: "trappedScenario()" }
+            ]);
+        }
+
+        function returnHome() {
+            updateGameText("You return home, knowing the search is not over. You resolve to be more cautious next time.");
+            firstChoice();
+        }
+
+        function trappedScenario() {
+            updateGameText("As you continue your search, you stumble into a trap set by the guards. They lock you in a small shed, planning to question you later. You notice a loose plank on the wall and see a chance to escape. Do you...");
+            updateChoices([
+                { text: "Try to pry the plank loose and escape.", action: "escapeScenario()" },
+                { text: "Wait for the guards to leave and then look for another way out.", action: "waitForGuards()" }
+            ]);
+        }
+
+        function escapeScenario() {
+            updateGameText("You manage to pry the plank loose and slip out of the shed. You find yourself in the woods, but you can hear the guards searching for you. Do you...");
+            updateChoices([
+                { text: "Run deeper into the woods to hide.", action: "runDeeper()" },
+                { text: "Try to find your way back to the farmhouse.", action: "findFarmhouse()" }
+            ]);
+        }
+
+        function runDeeper() {
+            updateGameText("You run deeper into the woods, hiding behind trees and bushes. After a while, the guards give up the search, and you find a safe spot to rest. You realize that your journey is far from over, but you are determined to find St. Edmund Campion.");
+            firstChoice();
+        }
+
+        function findFarmhouse() {
+            updateGameText("You cautiously make your way back to the farmhouse, hoping to find St. Edmund before he leaves. You arrive just in time to see him preparing to depart.");
+            finalEncounter();
+        }
+
+        function waitForGuards() {
+            updateGameText("You decide to wait for the guards to leave. After a while, you hear them walking away, and you take the opportunity to look for a way out. You find a window that you can squeeze through. Do you...");
+            updateChoices([
+                { text: "Climb out the window and escape.", action: "climbOut()" },
+                { text: "Look for something to defend yourself with before escaping.", action: "findWeapon()" }
+            ]);
+        }
+
+        function climbOut() {
+            updateGameText("You climb out the window and make a run for it. You manage to evade the guards and find yourself back in the safety of the woods.");
+            firstChoice();
+        }
+
+        function findWeapon() {
+            updateGameText("You find a sturdy stick and prepare yourself. As you climb out, you encounter a guard who has returned. You manage to fend him off and escape into the woods.");
+            firstChoice();
+        }
+
+        function finalEncounter() {
+            updateGameText("After the Mass, St. Edmund Campion takes you aside and gives you a small cross, a symbol of faith and courage. He asks if you would like to accompany him on his journey, knowing the risks involved. Do you...");
+            updateChoices([
+                { text: "Agree to accompany him.", action: "agreeToAccompany()" },
+                { text: "Decline and promise to carry on his legacy in your own way.", action: "declineOffer()" }
+            ]);
+        }
+
+        function agreeToAccompany() {
+            updateGameText("You decide to accompany St. Edmund. Together, you face many dangers, but you learn valuable lessons about faith and bravery. Unfortunately, you are eventually captured, but your spirit remains unbroken. You carry his teachings with you, inspiring others.");
+        }
+
+        function declineOffer() {
+            updateGameText("You decline the offer, understanding the dangers that lie ahead. Instead, you promise to carry on his legacy by helping others in your village. You become a beacon of hope for those around you, sharing the stories of St. Edmund Campion and the importance of faith.");
         }
     </script>
-</main>
 </body>
 </html>

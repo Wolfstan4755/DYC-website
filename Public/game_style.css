@@ -58,6 +58,9 @@ button {
 button:hover {
     background-color: #3498db; /* Lighter blue on hover */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9f1f823 (nav button add to new css game_style)
 }
 
 .nav-button {
@@ -68,6 +71,9 @@ button:hover {
     text-decoration: none; /* Remove underline */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth transition */
+<<<<<<< HEAD
 =======
 >>>>>>> b55f40b (Ms game css new)
+=======
+>>>>>>> 9f1f823 (nav button add to new css game_style)
 }

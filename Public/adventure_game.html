@@ -156,9 +156,14 @@
     <title>Text-Based Adventure Game: Finding St. Edmund Campion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="confined-text">        
+        <h1>Game</h1>   
+    </header>
+
+<main class="full-width-container">
     <div class="container">
         <h1>Finding St. Edmund Campion</h1>
         <div class="game-text" id="game-text">
@@ -168,7 +173,6 @@
             <li><button onclick="makeChoice(1)">Start your journey</button></li>
         </ul>
     </div>
-
     <script>
         const gameText = document.getElementById('game-text');
         const choices = document.getElementById('choices');
@@ -193,7 +197,7 @@
                     gameText.innerHTML = '<p>You take the right path and after a while, you find a small clearing with a hidden chapel. You see a figure praying inside.</p>';
                     choices.innerHTML = `
                         <li><button onclick="makeChoice(6)">Approach the figure</button></li>
-                        <li><button onclick="makeChoice(7)">Hide and observe</button></li>
+                        <li>< button onclick="makeChoice(7)">Hide and observe</button></li>
                     `;
                     break;
                 case 4:
@@ -242,5 +246,6 @@
 >>>>>>> f8324e4 (adventure_game)
         }
     </script>
+</main>
 </body>
 </html>

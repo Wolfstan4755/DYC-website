@@ -58,3 +58,13 @@ button {
 button:hover {
     background-color: #3498db; /* Lighter blue on hover */
 }
+
+.nav-button {
+    margin: 0 10px; /* Space between buttons */
+    padding: 10px 20px; /* Padding for buttons */
+    background-color: #2980b9; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}

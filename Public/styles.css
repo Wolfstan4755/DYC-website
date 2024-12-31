@@ -32,6 +32,7 @@ main {
 
 .full-width-header{
     background-color: white;
+    color: rgba(255, 75, 75, 0.494);
     padding: 20px;
     text-align: center;
 }

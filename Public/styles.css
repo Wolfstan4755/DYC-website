@@ -1,15 +1,16 @@
-/* Reset some default styles */
+    /* Reset some default styles */
 body {
     margin: 0;
     padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
     background-color: #e9ecef; /* Light gray background for the body */
     color: #333; /* Dark text color */
+    box-sizing: border-box; /* Include padding and border in element width and height */
 }
 
 header {
     background-color: white; /* Header background color */
-    color: #3334; 
+    color: #333; /* Dark text color */
     padding: 20px;
     text-align: center;
 }
@@ -18,6 +19,8 @@ main {
     flex: 1; /* Allows the main content to grow and fill the available space */
     padding: 10px;
     background-color: white; /* Light background for main content */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
 }
 
 .full-width-container {
@@ -28,6 +31,7 @@ main {
     background-color: #b0322d; /* White background for content */
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     border-radius: 8px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element width and height */
 }
 
 .full-width-header{
@@ -40,20 +44,21 @@ main {
 .confined-text{
     padding: 10px;  
     background-color: white;
-    color:rgb(0, 0, 0)
+    color:rgb(0, 0, 0);
     border-radius: 8px;
-    box-shadow: 0 10px 10px rgba(0, 0,
-    0, 0.1);
+    box-shadow: 0 10px 10px rgba(0, 0,0, 0.1);
 }
 
 h1, h2 {
     text-align: center; /* Center text */
     color: #8c7d32; /* Green color for headings */
+    margin: 0; /* Remove default margin */
 }
 
 p {
     text-align: center; /* Center text */
     line-height: 1.6; /* Improve readability */
+    margin: 0; /* Remove default margin */
 }
 
 nav {
@@ -69,6 +74,7 @@ nav {
     text-decoration: none; /* Remove underline */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth transition */
+    display: inline-block; /* Allow multiple buttons on the same line */
 }
 
 .nav-button:hover {
@@ -128,6 +134,7 @@ footer {
     position: relative; /* Position relative for footer */
     bottom: 0; /* Stick to the bottom */
     width: 100%; /* Full width */
+    clear: both; /* Clear any floats */
 }
 
 .event-card {
@@ -137,6 +144,7 @@ footer {
     padding: 10px;
     margin-bottom: 20px; /* Space between cards */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-sizing: border-box; /* Include padding and border in element width and height */
 }
 
 .event-title {
@@ -176,12 +184,13 @@ footer {
 
 .location-list li {
     padding-left: 10px; /* Adjust this value to move the text closer to the bullet */
-    margin: 30; /* Remove any default margin */
+    margin: 0; /* Remove any default margin */
 }
 
 .center-text {
     text-align: center; /* Center the text */
 }
+
 .things {
    text-align: center; /* Center the text */
 }

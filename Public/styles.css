@@ -271,7 +271,7 @@ main {
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Add some padding */
     background-color: #b0322d; /* White background for content */
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     border-radius: 8px; /* Rounded corners */
     box-sizing: border-box; /* Include padding and border in element width and height */
 }

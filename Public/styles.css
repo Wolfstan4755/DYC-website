@@ -260,7 +260,7 @@ header {
 main {
     flex: 1; /* Allows the main content to grow and fill the available space */
     padding: 10px;
-    background-color: white; /* Light background for main content */
+    background-color: #ffff; /* Light background for main content */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack elements vertically */
 }

@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    background-color: #e9ecef; /* Light gray background for the body */
-    color: #333; /* Dark text color */
+    background-color: white; /* Light gray background for the body */
+    color: black; /* Dark text color */
     box-sizing: border-box; /* Include padding and border in element width and height */
 }
 

@@ -529,4 +529,27 @@ h1 {
 .button-container button:hover {
     background-color: #73672a; /* Darker shade for hover effect */
 }
+<<<<<<< HEAD
 >>>>>>> 6bcd593 (hjb)
+=======
+
+/* General Responsive Styles */
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Specific adjustments for smaller screens */
+@media (max-width: 768px) {
+    img {
+        width: 90%; /* Scale the image to 90% of the container width */
+    }
+
+    iframe {
+        width: 100%; /* Make the video fill the container width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+>>>>>>> ef97683 (/* General Responsive Styles */)

@@ -194,13 +194,23 @@ footer {
 .things {
    text-align: center; /* Center the text */
 }
-.button-container{
+
+.button-container {
+    text-align: center; /* Center the buttons in the container if needed */
+}
+
+.button-container button {
     margin: 0 10px; /* Space between buttons */
-    padding: 10px 20px; /* Padding for buttons */
+    padding: 10px 20px; /* Padding inside buttons */
     background-color: #8c7d32; /* Button background color */
     color: white; /* Button text color */
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; /* Remove underline (not needed for buttons) */
+    border: none; /* Remove default button borders */
     border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    display: inline-block; /* Allow multiple buttons on the same line */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.button-container button:hover {
+    background-color: #73672a; /* Darker shade for hover effect */
 }

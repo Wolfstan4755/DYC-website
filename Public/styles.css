@@ -544,14 +544,15 @@ img, iframe {
 /* Specific adjustments for smaller screens */
 @media (max-width: 768px) {
     img {
-        width: 90%; /* Scale the image to 90% of the container width */
+        width: auto; /* Scale the image to 90% of the container width */
     }
 
     iframe {
-        width: 100%; /* Make the video fill the container width */
-        height: 100%; /* Maintain aspect ratio */
+        width: auto; /* Make the video fill the container width */
+        height: auto; /* Maintain aspect ratio */
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ef97683 (/* General Responsive Styles */)
 =======
@@ -586,3 +587,5 @@ img, iframe {
 >>>>>>> 814878c (iframe-full-width-container ">)
 =======
 >>>>>>> ae2cfec (iframe-full-width-container deleated)
+=======
+>>>>>>> b3bfe3b (iframe-full-width-container)

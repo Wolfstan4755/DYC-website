@@ -243,5 +243,16 @@ img, iframe {
     box-shadow: 0 10px 10px rgba(0, 0,0, 0.1);
     margin: 20px;
     width: 50;
-    height: 50;
+    height: 100;
+}
+
+.iframe-full-width-container {
+    padding: 10px;  
+    background-color: white;
+    color:rgb(0, 0, 0);
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0,0, 0.1);
+    margin: 20px;
+    width: 50;
+    height: 100;
 }

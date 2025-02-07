@@ -552,4 +552,18 @@ img, iframe {
         height: auto; /* Maintain aspect ratio */
     }
 }
+<<<<<<< HEAD
 >>>>>>> ef97683 (/* General Responsive Styles */)
+=======
+
+.iframe-confine-text {
+    padding: 10px;  
+    background-color: white;
+    color:rgb(0, 0, 0);
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0,0, 0.1);
+    margin: 20px;
+    width: 50;
+    height: 50;
+}
+>>>>>>> 0e6ef09 (.iframe-confine-text)

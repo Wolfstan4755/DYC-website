@@ -24,7 +24,7 @@ const url = 'Videos/DYC Booklet.pdf'; // Path to your PDF file
 let pdfDoc = null;
 let currentPage = 1;
 let totalPages = 0;
-const scale = 3.9; // Adjust this value (e.g., 0.5 to make it smaller, 1 for normal size)
+const scale = 5.9; // Adjust this value (e.g., 0.5 to make it smaller, 1 for normal size)
 const canvas = document.getElementById('pdf-canvas');
 const ctx = canvas.getContext('2d');
 

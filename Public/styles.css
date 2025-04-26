@@ -245,7 +245,33 @@ iframe {
 }
 
 /* Specific adjustments for smaller screens */
+/* Mobile adjustments for word spacing */
 @media (max-width: 768px) {
+    body {
+        padding: 20px; /* Add extra padding for mobile */
+    }
+    
+    h1, h2, h3, p {
+        word-spacing: 2px; /* Adjust word spacing for better readability */
+        line-height: 1.8; /* Increase line-height for easier reading on small screens */
+        font-size: 18px; /* Ensure text isn't too small */
+    }
+
+    .pdf-container {
+        height: 600px; /* Reduced height on mobile for better fit */
+        padding: 5px; /* Reduced padding */
+    }
+    
+    .nav-button, .dropbtn, .button-container button {
+        padding: 10px 15px; /* Adjust button padding for mobile */
+        font-size: 16px; /* Slightly smaller buttons */
+    }
+    
+    .rounded-shadow {
+        width: 100%; /* Full width for images */
+        height: auto;
+    }
+
     img {
         width: auto; /* Scale the image to 90% of the container width */
     }
@@ -257,15 +283,16 @@ iframe {
 }
 
 .pdf-container {
-    width: 80%; /* or whatever width you want */
-    max-width: 800px; /* optional: limits how wide it gets */
+    width: 100%; /* Set it to 100% for smaller screens */
+    max-width: 800px; /* Optional: limits how wide it gets */
     height: 900px;
-    margin: 0 auto; /* THIS centers it horizontally */
+    margin: 0 auto; /* Center horizontally */
     overflow: hidden;
+    padding: 10px; /* Add padding to avoid edges touching */
 }
 
 .pdf-viewer {
-    width: 100%;
+    width: 100%; /* Take full width of the container */
     height: 100%;
     border: none;
 }

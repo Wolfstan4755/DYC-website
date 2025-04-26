@@ -228,15 +228,7 @@ img {
     height: auto;   /* Maintain aspect ratio */
 }
 
-.google-slides {
-    width: 800%;
-    max-width: 100%;
-    height: 700px;
-    display: block;
-    margin: 0 auto;
-}
-
-.video-container {
+.iframe {
     width: 800%;
     max-width: 100%;
     height: 700px;

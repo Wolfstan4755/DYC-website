@@ -245,18 +245,17 @@ iframe {
 }
 
 .pdf-container {
-    width: 100%; /* Set it to 100% for smaller screens */
-    max-width: 800px; /* Optional: limits how wide it gets */
-    height: 900px;
-    margin: 0 auto; /* Center horizontally */
-    overflow: hidden;
-    padding: 10px; /* Add padding to avoid edges touching */
+    width: 100%;        /* full width now */
+    max-width: 1200px;  /* limit it so it matches the screen we faked */
+    height: 900px;      /* keep your height */
+    margin: 0 auto;     /* center it */
+    overflow: hidden;   /* just in case */
 }
 
 .pdf-viewer {
-    width: 100%; /* Take full width of the container */
-    height: 100%;
-    border: none;
+    width: 100%;       /* full width */
+    height: 100%;      /* full height */
+    border: none;      /* no borders */
 }
 
 .mobile-wrapper {

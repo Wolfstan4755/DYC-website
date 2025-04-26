@@ -18,241 +18,38 @@ header {
 main {
     flex: 1; /* Allows the main content to grow and fill the available space */
     padding: 10px;
-    background-color: #ffff; /* Light background for main content */
-    display: block; /* Changed from flex to block for normal content flow */
-    text-align: center; /* Ensures the content is centered */
+    background-color: #fff; /* Light background color for content */
 }
 
 .full-width-container {
     width: 100%;
-    max-width: 1200px; /* Maximum width for larger screens */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Add some padding */
-    background-color: #b0322d; /* White background for content */
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    box-sizing: border-box; /* Include padding and border in element width and height */
-}
-
-.full-width-header {
-    background-color: white;
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    text-align: center;
+    padding: 0 10px;
 }
 
 .confined-text {
-    padding: 10px;
-    background-color: white;
-    color: rgb(0, 0, 0);
-    border-radius: 8px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Prevent the content from becoming too wide */
+    margin: 0 auto; /* Center content */
 }
 
-h1, h2 {
-    text-align: center; /* Center text */
-    color: #8c7d32; /* Green color for headings */
-    margin: 0; /* Remove default margin */
-}
-
-p {
-    text-align: center; /* Center text */
-    line-height: 1.6; /* Improve readability */
-    margin: 0; /* Remove default margin */
-}
-
-nav {
-    text-align: center; /* Center navigation links */
-    margin: 20px 0; /* Add some margin */
-}
-
-.nav-button {
-    margin: 0 10px; /* Space between buttons */
-    padding: 10px 20px; /* Padding for buttons */
-    background-color: #8c7d32; /* Button background color */
-    color: white; /* Button text color */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    display: inline-block; /* Allow multiple buttons on the same line */
-    padding: 15px 25px;
-    font-size: 18px;
-}
-
-.nav-button:hover {
-    background-color: #554b1b; /* Darker green on hover */
-}
-
-.dropdown {
-    position: relative; /* Position relative for absolute positioning of dropdown content */
-    display: inline-block; /* Allow it to sit inline with other elements */
-    text-align: center; /* Center the dropdown button */
-    margin: 20px auto; /* Center the dropdown */
-}
-
-.dropbtn {
-    background-color: #8c7d32; /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding */
-    font-size: 16px; /* Font size */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    padding: 15px 25px;
-    font-size: 18px;
-}
-
-.dropbtn:hover {
-    background-color: #554b1b; /* Darker red on hover */
-}
-
-.dropdown-content {
-    display: none; /* Hidden by default */
-    position: absolute; /* Position it below the button */
-    background-color: #8c7d32; /* Background color */
-    min-width: 160px; /* Minimum width */
-    box-shadow: 0px 8px 16px 0px rgba(255, 255, 0, 0.2); /* Shadow */
-    z-index: 1; /* Ensure it appears above other content */
-    border-radius: 5px; /* Rounded corners */
-    text-align: left; /* Align text to the left */
-}
-
-.dropdown-content a {
-    color: black; /* Text color */
-    padding: 12px 16px; /* Padding */
-    text-decoration: none; /* No underline */
-    display: block; /* Block display */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1; /* Change background on hover */
-}
-
-footer {
-    text-align: center; /* Center footer text */
-    padding: 10px; /* Padding for footer */
-    background-color: white; /* Footer background color */
-    color: #b0322d; /* Footer text color */
-    position: relative; /* Position relative for footer */
-    bottom: 0; /* Stick to the bottom */
-    width: 100%; /* Full width */
-    clear: both; /* Clear any floats */
-}
-
-.event-card {
-    background-color: rgb(221, 173, 173); /* Card background */
-    border: 1px solid #9e6f6f; /* Card border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px;
-    margin-bottom: 20px; /* Space between cards */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    box-sizing: border-box; /* Include padding and border in element width and height */
-}
-
-.event-title {
-    font-size: 1.5em; /* Larger font for event title */
-    margin: 0 0 10px; /* Space below title */
-}
-
-.event-date {
-    color: #6c757d; /* Grey color for date */
-    margin-bottom: 10px; /* Space below date */
-}
-
-.button-style {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #8c7d32; /* Button color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px; /* Space above button */
-}
-
-.button-style:hover {
-    background-color: #706323; /* Darker shade on hover */
-}
-
-.responsive-map {
-    max-width: 600px; /* Set a maximum width */
-    width: 100%; /* Allow it to be responsive */
-    height: auto; /* Maintains aspect ratio */
-}
-
-.location-list {
-    list-style-type: disc; /* or any other type of bullet */
-    padding-left: 0; /* Remove default padding */
-}
-
-.location-list li {
-    padding-left: 10px; /* Adjust this value to move the text closer to the bullet */
-    margin: 0; /* Remove any default margin */
-}
-
-.center-text {
-    text-align: center; /* Center the text */
-}
-
-.things {
-   text-align: center; /* Center the text */
-}
-
-.button-container {
-    text-align: center; /* Center the buttons in the container */
-}
-
-.button-container button {
-    margin: 0 10px; /* Space between buttons */
-    padding: 10px 20px; /* Padding inside buttons */
-    background-color: #8c7d32; /* Button background color */
-    color: white; /* Button text color */
-    text-decoration: none; /* Remove underline (not needed for buttons) */
-    border: none; /* Remove default button borders */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth hover transition */
-    cursor: pointer; /* Change cursor on hover */
-}
-
-.button-container button:hover {
-    background-color: #73672a; /* Darker shade for hover effect */
-}
-
-/* General Responsive Styles */
-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.rounded-shadow {
-    display: block;
-    margin: 0 auto;
-    border-radius: 20px; /* rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* soft shadow */
-    object-fit: cover;
-}
-
-iframe {
-    width: 100%;
-    max-width: 100%;
-    height: 700px;
-    display: block;
-    margin: 0 auto;
+h2 {
+    color: #0a69a1; /* Blueish color */
+    font-size: 2rem; /* Adjusted heading font size */
 }
 
 .pdf-container {
-    width: 100%;
-    overflow-x: auto; /* Allow side scrolling on smaller screens */
+    display: flex;
+    justify-content: center; /* Center the PDF viewer */
+    align-items: center;
+    overflow-x: auto; /* Allow scrolling if necessary */
 }
 
 .pdf-viewer {
     width: 100%;
-    height: 100px;
+    height: 80vh; /* Dynamic height based on viewport size */
+    max-width: 1100px;
     border: none;
+    display: block;
+    margin: 0 auto;
     transform: scale(1);
     transform-origin: top left;
 }
@@ -260,7 +57,29 @@ iframe {
 /* Mobile optimization */
 @media (max-width: 768px) {
     .pdf-viewer {
-        width: 100%; /* Make it shrink to fit the mobile screen */
-        height: 500px; /* Shorter height for smaller devices */
+        height: 400px; /* Adjust height for mobile */
     }
+}
+
+/* Button styling */
+.button-container button {
+    background-color: #0a69a1; /* Blue background */
+    color: white; /* White text color */
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.button-container button:hover {
+    background-color: #06587e; /* Darker blue on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #0a69a1;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }

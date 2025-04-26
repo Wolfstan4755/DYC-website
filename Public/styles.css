@@ -223,6 +223,16 @@
         display: block;
         margin: 0 auto;
     }
+
+    .round-shadow {
+        display: block;
+        margin: 0 auto;
+        width: 600px;
+        height: 650px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px #8c7d32(0,0,0,0.3);
+        object-fit: cover;
+      }      
     
     iframe {
         width: 100%;

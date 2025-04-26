@@ -224,7 +224,8 @@ img {
 #pdf-canvas {
     display: block;
     margin: 0 auto; /* Center canvas */
-    width: 100%;
+    max-width: 90%; /* Limit the width to 90% of its parent container */
+    height: auto;   /* Maintain aspect ratio */
 }
 
 .button-container {

@@ -234,3 +234,15 @@
             height: auto; /* Maintain aspect ratio */
         }
     }
+    .pdf-container {
+        width: 100%;
+        height: 1000px; /* or however tall you want it */
+        overflow: hidden;
+      }
+      
+      .pdf-viewer {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      

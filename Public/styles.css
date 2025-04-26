@@ -228,16 +228,12 @@ img {
     height: auto;   /* Maintain aspect ratio */
 }
 
- /* Adjust video size */
-.video-container iframe {
-    width: 100%;     /* Full width of the container */
-    height: 600px;   /* Increase the height for a larger video */
-}
-
-/* Adjust Google Form size */
-.google-form iframe {
-    width: 190%;      /* Make the form responsive */
-    height: 1000px;    /* Increase the height for a larger form */
+iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 700px;
+    display: block;
+    margin: 0 auto;
 }
 
 .button-container {

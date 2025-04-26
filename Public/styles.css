@@ -217,13 +217,32 @@ img {
 }
 
 .pdf-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling on small screens */
 }
 
 #pdf-canvas {
+    display: block;
+    margin: 0 auto; /* Center canvas */
     width: 100%;
-    height: auto;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #8c7d32; /* Custom button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.button-container button:hover {
+    background-color: #554b1b;
 }

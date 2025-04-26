@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Wittgenstein:wght@400;700&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     </head>  
     <body>
         <header>
@@ -65,13 +65,13 @@
                 <div class="full-width-container">
                     <div class="confined-text">
                         <section id="booklet">
+                            <div class="pdf-container">
+                                <canvas id="pdf-canvas"></canvas>
+                            </div>
                             <div class="button-container">
                                 <button onclick="goToPreviousPage()">Previous</button>
                                 <button onclick="goToNextPage()">Next</button>
-                            </div>                            
-                            <div class="pdf-container">
-                                <canvas id="pdf-canvas"></canvas>
-                            </div>                                                                             
+                            </div>                                                                                                        
                         </section>
                     </div>
                 </div>

@@ -20,66 +20,45 @@ window.onclick = function(event) {
     }
 }
 
-// PDF.js script to load and render the PDF
-const pdfUrl = 'path/to/your/document.pdf'; // Replace with your PDF file path
-
-// Get the canvas element where the PDF will be rendered
-const canvas = document.getElementById('pdf-canvas');
-const context = canvas.getContext('2d');
-
-// Load the PDF document
-pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
-    // Get the first page of the PDF
-    pdf.getPage(1).then(function(page) {
-        const viewport = page.getViewport({ scale: 1 });
-
-        // Set canvas dimensions to match the PDF page
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-
-        // Render the page on the canvas
-        const renderContext = {
-            canvasContext: context,
-            viewport: viewport
-        };
-        page.render(renderContext);
-    });
-});
-
-// Optional: Functions for navigation
-let currentPage = 1;
+const url = 'Videos/DYC Booklet.pdf'; // Path to your PDF file
 let pdfDoc = null;
+let currentPage = 1;
+let totalPages = 0;
+const canvas = document.getElementById('pdf-canvas');
+const ctx = canvas.getContext('2d');
 
-// Load the PDF document for navigation
-pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
+// Load the PDF
+pdfjsLib.getDocument(url).promise.then((pdf) => {
     pdfDoc = pdf;
+    totalPages = pdf.numPages;
     renderPage(currentPage);
 });
 
+// Function to render a page
 function renderPage(pageNum) {
-    pdfDoc.getPage(pageNum).then(function(page) {
+    pdfDoc.getPage(pageNum).then((page) => {
         const viewport = page.getViewport({ scale: 1 });
-        canvas.width = viewport.width;
         canvas.height = viewport.height;
+        canvas.width = viewport.width;
 
-        const renderContext = {
-            canvasContext: context,
-            viewport: viewport
-        };
-        page.render(renderContext);
+        // Render the page into the canvas context
+        page.render({
+            canvasContext: ctx,
+            viewport: viewport,
+        });
     });
 }
 
-function goToNextPage() {
-    if (currentPage < pdfDoc.numPages) {
-        currentPage++;
-        renderPage(currentPage);
-    }
+// Go to the previous page
+function goToPreviousPage() {
+    if (currentPage <= 1) return; // Already on the first page
+    currentPage--;
+    renderPage(currentPage);
 }
 
-function goToPreviousPage() {
-    if (currentPage > 1) {
-        currentPage--;
-        renderPage(currentPage);
-    }
+// Go to the next page
+function goToNextPage() {
+    if (currentPage >= totalPages) return; // Already on the last page
+    currentPage++;
+    renderPage(currentPage);
 }

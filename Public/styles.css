@@ -228,6 +228,14 @@ img {
     height: auto;   /* Maintain aspect ratio */
 }
 
+iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
 .button-container {
     text-align: center; /* Center the buttons */
     margin-top: 20px;

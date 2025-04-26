@@ -224,7 +224,7 @@ img {
 #pdf-canvas {
     display: block;
     margin: 0 auto; /* Center canvas */
-    max-width: 90%; /* Limit the width to 90% of its parent container */
+    max-width: 100%; /* Limit the width to 90% of its parent container */
     height: auto;   /* Maintain aspect ratio */
 }
 

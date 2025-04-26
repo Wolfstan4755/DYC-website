@@ -235,8 +235,10 @@
         }
     }
     .pdf-container {
-        width: 50%;
-        height: 1000px; /* or however tall you want it */
+        width: 80%; /* or whatever width you want */
+        max-width: 800px; /* optional: limits how wide it gets */
+        height: 1000px;
+        margin: 0 auto; /* THIS centers it horizontally */
         overflow: hidden;
       }
       

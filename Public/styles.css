@@ -1,111 +1,258 @@
-/* Your original CSS */
+/* Reset some default styles */
 body {
     margin: 0;
     padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Original body text color */
-    box-sizing: border-box;
+    background-color: white; /* Light gray background for the body */
+    color: black; /* Dark text color */
+    box-sizing: border-box; /* Include padding and border in element width and height */
 }
 
 header {
-    background-color: #333333; /* Original header background color */
-    color: #ffffff; /* Original header text color */
+    background-color: white; /* Header background color */
+    color: #333; /* Dark text color */
     padding: 20px;
     text-align: center;
 }
 
 main {
-    flex: 1;
+    flex: 1; /* Allows the main content to grow and fill the available space */
     padding: 10px;
-    background-color: #ffffff; /* White background */
-    display: block;
-    text-align: center;
+    background-color: #ffff; /* Light background for main content */
+    display: block; /* Changed from flex to block for normal content flow */
+    text-align: center; /* Ensures the content is centered */
 }
 
 .full-width-container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff; /* White background */
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    border-radius: 8px;
-    box-sizing: border-box;
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    background-color: #b0322d; /* White background for content */
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element width and height */
 }
 
 .full-width-header {
-    background-color: #333333; /* Original header background color */
-    color: #ffffff; /* Original header text color */
+    background-color: white;
+    color: rgb(0, 0, 0);
     padding: 20px;
     text-align: center;
 }
 
 .confined-text {
     padding: 10px;
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Original text color */
+    background-color: white;
+    color: rgb(0, 0, 0);
     border-radius: 8px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
-    text-align: center;
-    color: #333333; /* Original color for headers */
-    margin: 0;
+    text-align: center; /* Center text */
+    color: #8c7d32; /* Green color for headings */
+    margin: 0; /* Remove default margin */
 }
 
 p {
-    text-align: center;
-    line-height: 1.6;
-    margin: 0;
+    text-align: center; /* Center text */
+    line-height: 1.6; /* Improve readability */
+    margin: 0; /* Remove default margin */
 }
 
 nav {
-    text-align: center;
-    margin: 20px 0;
+    text-align: center; /* Center navigation links */
+    margin: 20px 0; /* Add some margin */
 }
 
 .nav-button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: #333333; /* Original button background color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    display: inline-block;
+    margin: 0 10px; /* Space between buttons */
+    padding: 10px 20px; /* Padding for buttons */
+    background-color: #8c7d32; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    display: inline-block; /* Allow multiple buttons on the same line */
+    padding: 15px 25px;
+    font-size: 18px;
 }
 
 .nav-button:hover {
-    background-color: #444444; /* Darker color on hover */
+    background-color: #554b1b; /* Darker green on hover */
 }
 
-.footer {
-    text-align: center;
+.dropdown {
+    position: relative; /* Position relative for absolute positioning of dropdown content */
+    display: inline-block; /* Allow it to sit inline with other elements */
+    text-align: center; /* Center the dropdown button */
+    margin: 20px auto; /* Center the dropdown */
+}
+
+.dropbtn {
+    background-color: #8c7d32; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    padding: 15px 25px;
+    font-size: 18px;
+}
+
+.dropbtn:hover {
+    background-color: #554b1b; /* Darker red on hover */
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it below the button */
+    background-color: #8c7d32; /* Background color */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 0, 0.2); /* Shadow */
+    z-index: 1; /* Ensure it appears above other content */
+    border-radius: 5px; /* Rounded corners */
+    text-align: left; /* Align text to the left */
+}
+
+.dropdown-content a {
+    color: black; /* Text color */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* No underline */
+    display: block; /* Block display */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Change background on hover */
+}
+
+footer {
+    text-align: center; /* Center footer text */
+    padding: 10px; /* Padding for footer */
+    background-color: white; /* Footer background color */
+    color: #b0322d; /* Footer text color */
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    clear: both; /* Clear any floats */
+}
+
+.event-card {
+    background-color: rgb(221, 173, 173); /* Card background */
+    border: 1px solid #9e6f6f; /* Card border */
+    border-radius: 5px; /* Rounded corners */
     padding: 10px;
-    background-color: #333333; /* Original footer background color */
+    margin-bottom: 20px; /* Space between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-sizing: border-box; /* Include padding and border in element width and height */
+}
+
+.event-title {
+    font-size: 1.5em; /* Larger font for event title */
+    margin: 0 0 10px; /* Space below title */
+}
+
+.event-date {
+    color: #6c757d; /* Grey color for date */
+    margin-bottom: 10px; /* Space below date */
+}
+
+.button-style {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #8c7d32; /* Button color */
     color: white;
-    position: relative;
-    bottom: 0;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Space above button */
+}
+
+.button-style:hover {
+    background-color: #706323; /* Darker shade on hover */
+}
+
+.responsive-map {
+    max-width: 600px; /* Set a maximum width */
+    width: 100%; /* Allow it to be responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.location-list {
+    list-style-type: disc; /* or any other type of bullet */
+    padding-left: 0; /* Remove default padding */
+}
+
+.location-list li {
+    padding-left: 10px; /* Adjust this value to move the text closer to the bullet */
+    margin: 0; /* Remove any default margin */
+}
+
+.center-text {
+    text-align: center; /* Center the text */
+}
+
+.things {
+   text-align: center; /* Center the text */
+}
+
+.button-container {
+    text-align: center; /* Center the buttons in the container */
+}
+
+.button-container button {
+    margin: 0 10px; /* Space between buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    background-color: #8c7d32; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline (not needed for buttons) */
+    border: none; /* Remove default button borders */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.button-container button:hover {
+    background-color: #73672a; /* Darker shade for hover effect */
+}
+
+/* General Responsive Styles */
+img {
     width: 100%;
-    clear: both;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.rounded-shadow {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px; /* rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* soft shadow */
+    object-fit: cover;
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 700px;
+    display: block;
+    margin: 0 auto;
 }
 
 .pdf-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
+    width: 100%;
+    overflow-x: auto; /* Allow side scrolling on smaller screens */
 }
 
 .pdf-viewer {
     width: 100%;
-    height: 80vh;
-    max-width: 1100px;
+    height: 100px;
     border: none;
-    display: block;
-    margin: 0 auto;
     transform: scale(1);
     transform-origin: top left;
 }
@@ -113,29 +260,7 @@ nav {
 /* Mobile optimization */
 @media (max-width: 768px) {
     .pdf-viewer {
-        height: 400px;
+        width: 100%; /* Make it shrink to fit the mobile screen */
+        height: 500px; /* Shorter height for smaller devices */
     }
-}
-
-/* Button styling */
-.button-container button {
-    background-color: #333333; /* Original button background color */
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.button-container button:hover {
-    background-color: #444444; /* Darker color on hover */
-}
-
-/* Footer */
-footer {
-    background-color: #333333; /* Original footer background color */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
 }

@@ -242,6 +242,33 @@
     
     /* Specific adjustments for smaller screens */
     @media (max-width: 768px) {
+        body {
+            padding: 5px;
+        }
+    
+        header, main, footer {
+            text-align: center;
+        }
+    
+        img, iframe, .pdf-viewer {
+            width: 90%; /* Make them nicely fit on small screens */
+            height: auto; /* Keep good proportions */
+        }
+    
+        .nav-button, .dropbtn, .button-style, .button-container button {
+            width: 90%;
+            margin: 10px auto;
+            display: block;
+        }
+    
+        .full-width-container, .pdf-container {
+            width: 95%;
+            padding: 10px;
+        }
+    
+        h1, h2, p {
+            font-size: 1.2em; /* Slightly bigger text for easier reading */
+        }
         img {
             width: auto; /* Scale the image to 90% of the container width */
         }
@@ -251,6 +278,7 @@
             height: auto; /* Maintain aspect ratio */
         }
     }
+
     .pdf-container {
         width: 80%; /* or whatever width you want */
         max-width: 800px; /* optional: limits how wide it gets */

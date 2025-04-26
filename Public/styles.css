@@ -6,7 +6,6 @@ body {
     background-color: white; /* Light gray background for the body */
     color: black; /* Dark text color */
     box-sizing: border-box; /* Include padding and border in element width and height */
-    font-size: 1rem; /* Base font size */
 }
 
 header {
@@ -25,11 +24,7 @@ main {
 }
 
 .full-width-container {
-    display: flex; /* Use Flexbox for layout */
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center content */
-    align-items: stretch; /* Allow items to stretch to fill the container */
-    width: 90%; /* Allow for more space */
+    width: 100%;
     max-width: 1200px; /* Maximum width for larger screens */
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Add some padding */
@@ -58,14 +53,12 @@ h1, h2 {
     text-align: center; /* Center text */
     color: #8c7d32; /* Green color for headings */
     margin: 0; /* Remove default margin */
-    font-size: 2rem; /* Scales with the base size */
 }
 
 p {
     text-align: center; /* Center text */
     line-height: 1.6; /* Improve readability */
     margin: 0; /* Remove default margin */
-    font-size: 0.875rem; /* Smaller text for paragraphs */
 }
 
 nav {
@@ -108,4 +101,129 @@ nav {
     transition: background-color 0.3s ease; /* Smooth transition */
     padding: 15px 25px;
     font-size: 18px;
+}
+
+.dropbtn:hover {
+    background-color: #554b1b; /* Darker red on hover */
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it below the button */
+    background-color: #8c7d32; /* Background color */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 0, 0.2); /* Shadow */
+    z-index: 1; /* Ensure it appears above other content */
+    border-radius: 5px; /* Rounded corners */
+    text-align: left; /* Align text to the left */
+}
+
+.dropdown-content a {
+    color: black; /* Text color */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* No underline */
+    display: block; /* Block display */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Change background on hover */
+}
+
+footer {
+    text-align: center; /* Center footer text */
+    padding: 10px; /* Padding for footer */
+    background-color: white; /* Footer background color */
+    color: #b0322d; /* Footer text color */
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    clear: both; /* Clear any floats */
+}
+
+.button-style {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #8c7d32; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Space above button */
+}
+
+.button-style:hover {
+    background-color: #706323; /* Darker shade on hover */
+}
+
+.responsive-map {
+    max-width: 600px; /* Set a maximum width */
+    width: 100%; /* Allow it to be responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.location-list {
+    list-style-type: disc; /* or any other type of bullet */
+    padding-left: 0; /* Remove default padding */
+}
+
+.location-list li {
+    padding-left: 10px; /* Adjust this value to move the text closer to the bullet */
+    margin: 0; /* Remove any default margin */
+}
+
+.center-text {
+    text-align: center; /* Center the text */
+}
+
+.things {
+   text-align: center; /* Center the text */
+}
+
+.button-container {
+    text-align: center; /* Center the buttons in the container */
+}
+
+.button-container button {
+    margin: 0 10px; /* Space between buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    background-color: #8c7d32; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline (not needed for buttons) */
+    border: none; /* Remove default button borders */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.button-container button:hover {
+    background-color: #73672a; /* Darker shade for hover effect */
+}
+
+/* General Responsive Styles */
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.rounded-shadow {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px; /* rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* soft shadow */
+    object-fit: cover;
+}
+
+.pdf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+}
+
+#pdf-canvas {
+    width: 100%;
+    height: auto;
 }

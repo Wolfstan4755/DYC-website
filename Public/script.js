@@ -63,3 +63,52 @@ function goToNextPage() {
     currentPage++;
     renderPage(currentPage);
 }
+
+// Detect swipe direction
+let touchStartX = 0;
+let touchEndX = 0;
+
+function handleSwipe(e) {
+    touchEndX = e.changedTouches[0].screenX;
+
+    if (touchStartX - touchEndX > 50) {
+        // Swiped Left: Go to next page
+        goToNextPage();
+    }
+
+    if (touchEndX - touchStartX > 50) {
+        // Swiped Right: Go to previous page
+        goToPreviousPage();
+    }
+
+    touchStartX = 0; // Reset start position after swipe
+}
+
+// Attach touchstart and touchend events to the container
+pdfContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].screenX;
+});
+
+pdfContainer.addEventListener('touchend', handleSwipe);
+
+function goToPreviousPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderPage(currentPage);
+    }
+}
+
+function goToNextPage() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderPage(currentPage);
+    }
+}
+
+function renderPage(pageNum) {
+    // Your code to render the page goes here (PDF.js or custom content rendering)
+    console.log(`Rendering page ${pageNum}`);
+}
+
+// Optional: You can call the `renderPage()` function initially to show the first page.
+renderPage(currentPage);

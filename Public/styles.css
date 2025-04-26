@@ -3,14 +3,14 @@ body {
     margin: 0;
     padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    background-color: white; /* Light gray background for the body */
-    color: black; /* Dark text color */
+    background-color: white; /* White background */
+    color: red; /* Red text color */
     box-sizing: border-box; /* Include padding and border in element width and height */
 }
 
 header {
     background-color: white; /* Header background color */
-    color: #333; /* Dark text color */
+    color: red; /* Red text color */
     padding: 20px;
     text-align: center;
 }
@@ -18,22 +18,80 @@ header {
 main {
     flex: 1; /* Allows the main content to grow and fill the available space */
     padding: 10px;
-    background-color: #fff; /* Light background color for content */
+    background-color: #ffff; /* White background for main content */
+    display: block; /* Changed from flex to block for normal content flow */
+    text-align: center; /* Ensures the content is centered */
 }
 
 .full-width-container {
     width: 100%;
-    padding: 0 10px;
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    background-color: #fff; /* White background for content */
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element width and height */
+}
+
+.full-width-header {
+    background-color: white;
+    color: red; /* Red text color */
+    padding: 20px;
+    text-align: center;
 }
 
 .confined-text {
-    max-width: 1000px; /* Prevent the content from becoming too wide */
-    margin: 0 auto; /* Center content */
+    padding: 10px;
+    background-color: white;
+    color: red; /* Red text color */
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #0a69a1; /* Blueish color */
-    font-size: 2rem; /* Adjusted heading font size */
+h1, h2 {
+    text-align: center; /* Center text */
+    color: gold; /* Gold color for headings */
+    margin: 0; /* Remove default margin */
+}
+
+p {
+    text-align: center; /* Center text */
+    line-height: 1.6; /* Improve readability */
+    margin: 0; /* Remove default margin */
+}
+
+nav {
+    text-align: center; /* Center navigation links */
+    margin: 20px 0; /* Add some margin */
+}
+
+.nav-button {
+    margin: 0 10px; /* Space between buttons */
+    padding: 10px 20px; /* Padding for buttons */
+    background-color: gold; /* Gold background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    display: inline-block; /* Allow multiple buttons on the same line */
+    padding: 15px 25px;
+    font-size: 18px;
+}
+
+.nav-button:hover {
+    background-color: #f1c40f; /* Darker gold on hover */
+}
+
+.footer {
+    text-align: center; /* Center footer text */
+    padding: 10px; /* Padding for footer */
+    background-color: white; /* Footer background color */
+    color: gold; /* Footer text color */
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    clear: both; /* Clear any floats */
 }
 
 .pdf-container {
@@ -63,7 +121,7 @@ h2 {
 
 /* Button styling */
 .button-container button {
-    background-color: #0a69a1; /* Blue background */
+    background-color: gold; /* Gold background */
     color: white; /* White text color */
     padding: 10px 20px;
     margin: 5px;
@@ -73,12 +131,12 @@ h2 {
 }
 
 .button-container button:hover {
-    background-color: #06587e; /* Darker blue on hover */
+    background-color: #f1c40f; /* Darker gold on hover */
 }
 
 /* Footer */
 footer {
-    background-color: #0a69a1;
+    background-color: gold;
     color: white;
     text-align: center;
     padding: 10px 0;

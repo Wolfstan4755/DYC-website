@@ -234,7 +234,7 @@ img {
 }
 
 .button-container button {
-    font-size: 18px; /* Increase the font size */
+    font-size: 25px; /* Increase the font size */
     padding: 30px 45px; /* Increase padding to make the buttons larger */
     background-color: #8c7d32;
     color: white; /* White text */

@@ -75,6 +75,8 @@
         border-radius: 5px; /* Rounded corners */
         transition: background-color 0.3s ease; /* Smooth transition */
         display: inline-block; /* Allow multiple buttons on the same line */
+        padding: 15px 25px;
+        font-size: 18px;
     }
     
     .nav-button:hover {
@@ -97,6 +99,8 @@
         border-radius: 5px; /* Rounded corners */
         cursor: pointer; /* Pointer cursor on hover */
         transition: background-color 0.3s ease; /* Smooth transition */
+        padding: 15px 25px;
+        font-size: 18px;
     }
     
     .dropbtn:hover {
@@ -264,4 +268,11 @@
         height: 100%;
         border: none;
       }
+
+      .mobile-wrapper {
+        max-width: 500px; /* Looks good on phones */
+        margin: 0 auto; /* Center it */
+        padding: 20px; /* Some breathing room */
+    }
+    
       

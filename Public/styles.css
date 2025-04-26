@@ -236,8 +236,8 @@ img {
 
 /* Adjust Google Form size */
 .google-form iframe {
-    width: 100%;      /* Make the form responsive */
-    height: 900px;    /* Increase the height for a larger form */
+    width: 190%;      /* Make the form responsive */
+    height: 1000px;    /* Increase the height for a larger form */
 }
 
 .button-container {

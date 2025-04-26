@@ -228,19 +228,16 @@ img {
     height: auto;   /* Maintain aspect ratio */
 }
 
-/* Video Container */
+ /* Adjust video size */
 .video-container iframe {
-    width: 100%;  /* Make the video responsive */
-    max-width: 800px;  /* Set a max width if needed */
-    height: 500px;  /* Adjust the height for a larger video */
-    margin: 0 auto;  /* Center the video */
+    width: 100%;     /* Full width of the container */
+    height: 600px;   /* Increase the height for a larger video */
 }
-/* Google Form */
-.google-slides {
-    width: 100%;  /* Make the form responsive */
-    max-width: 800px;  /* Set a max width if needed */
-    height: 800px;  /* Increase the height for a larger form */
-    margin: 0 auto;  /* Center the form */
+
+/* Adjust Google Form size */
+.google-form iframe {
+    width: 100%;      /* Make the form responsive */
+    height: 900px;    /* Increase the height for a larger form */
 }
 
 .button-container {

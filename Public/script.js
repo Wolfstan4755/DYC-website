@@ -27,7 +27,9 @@ let totalPages = 0;
 const scale = 3.9; // Adjust this value (e.g., 0.5 to make it smaller, 1 for normal size)
 const canvas = document.getElementById('pdf-canvas');
 const ctx = canvas.getContext('2d');
-const pdfContainer = document.getElementById('pdf-container'); // Ensure you have this container in your HTML
+const pdfContainer = document.getElementById('pdf-container');
+const videoContainer = document.getElementById('video-container');
+const formContainer = document.getElementById('form-container');
 
 // Load the PDF
 pdfjsLib.getDocument(url).promise.then((pdf) => {
@@ -39,11 +41,10 @@ pdfjsLib.getDocument(url).promise.then((pdf) => {
 // Function to render a page
 function renderPage(pageNum) {
     pdfDoc.getPage(pageNum).then((page) => {
-        const viewport = page.getViewport({ scale: scale }); // Apply scale here
+        const viewport = page.getViewport({ scale: scale });
         canvas.height = viewport.height;
         canvas.width = viewport.width;
 
-        // Render the page into the canvas context
         page.render({
             canvasContext: ctx,
             viewport: viewport,
@@ -51,75 +52,41 @@ function renderPage(pageNum) {
     });
 }
 
-// Go to the previous page
+// Function to go to the previous page
 function goToPreviousPage() {
-    if (currentPage <= 1) return; // Already on the first page
+    if (currentPage <= 1) return;
     currentPage--;
     renderPage(currentPage);
 }
 
-// Go to the next page
+// Function to go to the next page
 function goToNextPage() {
-    if (currentPage >= totalPages) return; // Already on the last page
+    if (currentPage >= totalPages) return;
     currentPage++;
     renderPage(currentPage);
 }
 
-// Detect swipe direction
-let touchStartX = 0;
-let touchEndX = 0;
+// YouTube Video
+const videoId = 'your-video-id'; // Replace with your video ID
+const iframe = document.createElement('iframe');
+iframe.src = `https://www.youtube.com/embed/${videoId}`;
+iframe.width = '100%';
+iframe.height = '500px';
+iframe.frameBorder = '0';
+iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+iframe.allowFullscreen = true;
 
-function handleSwipe(e) {
-    touchEndX = e.changedTouches[0].screenX;
+videoContainer.appendChild(iframe);
 
-    if (touchStartX - touchEndX > 50) {
-        // Swiped Left: Go to next page
-        goToNextPage();
-    }
+// Google Form
+const formURL = 'https://docs.google.com/forms/d/your-form-id/viewform'; // Replace with your Google Form ID
+const formIframe = document.createElement('iframe');
+formIframe.src = formURL;
+formIframe.width = '100%';
+formIframe.height = '800px';
+formIframe.frameBorder = '0';
 
-    if (touchEndX - touchStartX > 50) {
-        // Swiped Right: Go to previous page
-        goToPreviousPage();
-    }
+formContainer.appendChild(formIframe);
 
-    touchStartX = 0; // Reset start position after swipe
-}
-
-// Attach touchstart and touchend events to the container
-pdfContainer.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].screenX;
-});
-
-pdfContainer.addEventListener('touchend', handleSwipe);
-
-// Optional: You can call the `renderPage()` function initially to show the first page.
+// Optional: Render the first page initially
 renderPage(currentPage);
-
-
-function loadIframe() {
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://docs.google.com/forms/d/e/1FAIpQLSeaBcC-cCUqlln9-IPLR3P98aZqRsnje6od9MyU6Uq9dkVCKQ/viewform?usp=sf_link';
-    iframe.width = '100%';
-    iframe.height = '900';
-    iframe.style.border = 'none';
-    document.getElementById('iframe-container').appendChild(iframe);
-  }
-  
-  window.onload = loadIframe;  
-
-  function loadYouTube() {
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube.com/watch?v=Kiu6-YLlCEg';
-    iframe.width = '100%';  // You can adjust this to suit your layout
-    iframe.height = '500';  // You can adjust the height
-    iframe.frameborder = '0';
-    iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
-    iframe.allowfullscreen = true;
-    
-    // Append the iframe to the container
-    document.getElementById('youtube-container').appendChild(iframe);
-  }
-  
-  // Call the function when the page loads
-  window.onload = loadYouTube;
-  

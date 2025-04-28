@@ -66,27 +66,23 @@ function goToNextPage() {
     renderPage(currentPage);
 }
 
-// YouTube Video
-const videoId = 'your-video-id'; // Replace with your video ID
-const iframe = document.createElement('iframe');
-iframe.src = `https://www.youtube.com/embed/${videoId}`;
-iframe.width = '100%';
-iframe.height = '500px';
-iframe.frameBorder = '0';
-iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-iframe.allowFullscreen = true;
+(function() {
+    const videoContainer = document.getElementById('video-container');
+    const formContainer = document.getElementById('form-container');
 
-videoContainer.appendChild(iframe);
+    // YouTube video embed
+    const videoId = 'Kiu6-YLlCEg';
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${videoId}`;
+    iframe.width = "560";
+    iframe.height = "315";
+    videoContainer.appendChild(iframe);
 
-// Google Form
-const formURL = 'https://docs.google.com/forms/d/your-form-id/viewform'; // Replace with your Google Form ID
-const formIframe = document.createElement('iframe');
-formIframe.src = formURL;
-formIframe.width = '100%';
-formIframe.height = '800px';
-formIframe.frameBorder = '0';
-
-formContainer.appendChild(formIframe);
-
-// Optional: Render the first page initially
-renderPage(currentPage);
+    // Google Form embed
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeaBcC-cCUqlln9-IPLR3P98aZqRsnje6od9MyU6Uq9dkVCKQ/viewform?usp=sf_link';
+    const formIframe = document.createElement('iframe');
+    formIframe.src = formUrl;
+    formIframe.width = "600";
+    formIframe.height = "800";
+    formContainer.appendChild(formIframe);
+})();

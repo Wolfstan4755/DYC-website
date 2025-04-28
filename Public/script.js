@@ -27,6 +27,7 @@ let totalPages = 0;
 const scale = 3.9; // Adjust this value (e.g., 0.5 to make it smaller, 1 for normal size)
 const canvas = document.getElementById('pdf-canvas');
 const ctx = canvas.getContext('2d');
+const pdfContainer = document.getElementById('pdf-container'); // Ensure you have this container in your HTML
 
 // Load the PDF
 pdfjsLib.getDocument(url).promise.then((pdf) => {
@@ -91,27 +92,9 @@ pdfContainer.addEventListener('touchstart', (e) => {
 
 pdfContainer.addEventListener('touchend', handleSwipe);
 
-function goToPreviousPage() {
-    if (currentPage > 1) {
-        currentPage--;
-        renderPage(currentPage);
-    }
-}
-
-function goToNextPage() {
-    if (currentPage < totalPages) {
-        currentPage++;
-        renderPage(currentPage);
-    }
-}
-
-function renderPage(pageNum) {
-    // Your code to render the page goes here (PDF.js or custom content rendering)
-    console.log(`Rendering page ${pageNum}`);
-}
-
 // Optional: You can call the `renderPage()` function initially to show the first page.
 renderPage(currentPage);
+
 
 function loadIframe() {
     const iframe = document.createElement('iframe');

@@ -112,3 +112,31 @@ function renderPage(pageNum) {
 
 // Optional: You can call the `renderPage()` function initially to show the first page.
 renderPage(currentPage);
+
+function loadIframe() {
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://docs.google.com/forms/d/e/1FAIpQLSeaBcC-cCUqlln9-IPLR3P98aZqRsnje6od9MyU6Uq9dkVCKQ/viewform?usp=sf_link';
+    iframe.width = '100%';
+    iframe.height = '900';
+    iframe.style.border = 'none';
+    document.getElementById('iframe-container').appendChild(iframe);
+  }
+  
+  window.onload = loadIframe;  
+
+  function loadYouTube() {
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube.com/watch?v=Kiu6-YLlCEg';
+    iframe.width = '100%';  // You can adjust this to suit your layout
+    iframe.height = '500';  // You can adjust the height
+    iframe.frameborder = '0';
+    iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowfullscreen = true;
+    
+    // Append the iframe to the container
+    document.getElementById('youtube-container').appendChild(iframe);
+  }
+  
+  // Call the function when the page loads
+  window.onload = loadYouTube;
+  

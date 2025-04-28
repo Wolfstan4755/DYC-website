@@ -74,15 +74,15 @@ function goToNextPage() {
     const videoId = 'Kiu6-YLlCEg';
     const iframe = document.createElement('iframe');
     iframe.src = `https://www.youtube.com/embed/${videoId}`;
-    iframe.width = "780";
-    iframe.height = "550";
+    iframe.width = "1090";
+    iframe.height = "890";
     videoContainer.appendChild(iframe);
 
     // Google Form embed
     const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeaBcC-cCUqlln9-IPLR3P98aZqRsnje6od9MyU6Uq9dkVCKQ/viewform?usp=sf_link';
     const formIframe = document.createElement('iframe');
     formIframe.src = formUrl;
-    formIframe.width = "400";
+    formIframe.width = "700";
     formIframe.height = "900";
     formContainer.appendChild(formIframe);
 })();

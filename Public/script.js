@@ -73,7 +73,7 @@ function goToNextPage() {
     // YouTube video embed
     const videoId = 'Kiu6-YLlCEg';
     const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${videoId}`;
+    iframe.src = `https://www.youtube.com/watch?v=T-LdS8uPaBg`;
     iframe.width = "560";
     iframe.height = "315";
     videoContainer.appendChild(iframe);

@@ -70,13 +70,19 @@ function goToNextPage() {
     const videoContainer = document.getElementById('video-container');
     const formContainer = document.getElementById('form-container');
 
-    // YouTube video embed
-    const videoId = 'Kiu6-YLlCEg';
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${videoId}`;
-    iframe.width = "1090";
-    iframe.height = "890";
-    videoContainer.appendChild(iframe);
+    document.addEventListener("DOMContentLoaded", function () {
+        const videoPlayer = document.getElementById("video-player");
+    
+        const video = document.createElement("video");
+        video.src = "Videos/rules.mp4"; // your MP4 file path
+        video.controls = true;
+        video.width = 800; // adjust size as needed
+        video.style.maxWidth = "100%";
+        video.style.borderRadius = "12px";
+        video.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.3)";
+    
+        videoPlayer.appendChild(video);
+    });    
 
     // Google Form embed
     const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeaBcC-cCUqlln9-IPLR3P98aZqRsnje6od9MyU6Uq9dkVCKQ/viewform?usp=sf_link';

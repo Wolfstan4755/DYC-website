@@ -79,12 +79,3 @@ function goToNextPage() {
     iframe.allowFullscreen = true;
     
     videoContainer.appendChild(iframe);
-    
-    // Google Form embed
-    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc8zXos4jESMbzB9TYpOZr8P9rk1g-sDTeimPULpYCggDTg7g/viewform';
-    const formIframe = document.createElement('iframe');
-    formIframe.src = formUrl;
-    formIframe.width = "700";
-    formIframe.height = "900";
-    formContainer.appendChild(formIframe);
-})();

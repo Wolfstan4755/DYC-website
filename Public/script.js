@@ -79,3 +79,4 @@ function goToNextPage() {
     iframe.allowFullscreen = true;
     
     videoContainer.appendChild(iframe);
+})

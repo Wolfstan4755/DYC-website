@@ -67,7 +67,7 @@ function goToNextPage() {
 }
 
 (function() {
-    const videoContainer = document.getElementById('video-container');
+    const videoContainer = document.getElementById('video-player');
     const formContainer = document.getElementById('form-container');
 
     document.addEventListener("DOMContentLoaded", function () {

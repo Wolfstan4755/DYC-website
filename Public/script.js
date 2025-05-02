@@ -68,14 +68,16 @@ function goToNextPage() {
 
 (function() {
     const videoContainer = document.getElementById('video-player');
-    const formContainer = document.getElementById('form-container');
 
-    // YouTube video embed
-    const videoId = 'Kiu6-YLlCEg';
+    const videoId = 'T-LdS8uPaBg';
     const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/watch?v=T-LdS8uPaBg`;
+    iframe.src = `https://www.youtube.com/embed/${videoId}`;
     iframe.width = "560";
     iframe.height = "315";
+    iframe.frameBorder = "0";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+    
     videoContainer.appendChild(iframe);
     
     // Google Form embed

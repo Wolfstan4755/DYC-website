@@ -1,134 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=1100" initial-scale=1.0>
-        <meta name="description" content="The theme for the 2025 Diocesan Youth Conference.">
-        <title>Diocesan Youth Conference</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Wittgenstein:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-    </head>  
-    <body>
-        <header>
-            <div class="full-width-container">
-                <div class="confined-text">
-                    <img src="images/Rescued sin.png" alt="Rescued" class="rounded-shadow">
-
-            
-                    <div class="button-container">
-                        <button onclick="location.href='#booklet'">Booklet</button>
-                        <button onclick="location.href='#rules'">Rules</button>
-                        <button onclick="location.href='#guidelines'">Guidelines</button>
-                        <button onclick="location.href='#photos'">Photo</button>
-                    </div>
-
-                    <nav>
-                        <a href="map.html" class="nav-button">Map</a>
-                        <a href="events.html" class="nav-button">Upcoming Events</a>
-                    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The theme for the 2025 Diocesan Youth Conference.">
+    <title>Diocesan Youth Conference</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Wittgenstein:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="full-width-container">
+            <div class="confined-text">
+                <img src="images/Rescued sin.png" alt="Rescued" class="rounded-shadow">
+                <div class="button-container">
+                    <button onclick="location.href='#booklet'">Booklet</button>
+                    <button onclick="location.href='#rules'">Rules</button>
+                    <button onclick="location.href='#guidelines'">Guidelines</button>
+                    <button onclick="location.href='#photos'">Photo</button>
                 </div>
-            </div>              
-        </header>
+                <nav>
+                    <a href="map.html" class="nav-button">Map</a>
+                    <a href="events.html" class="nav-button">Upcoming Events</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-        <main>
-            <div class="full-width-container">
-                <div class="confined-text">
-                    <section id="Home">
-                        <h2>Mission Statement</h2>
-                        <p>“The mission of the Diocesan Youth Conference in 2025 is to</p>
-                        <p>inspire the youth of the diocese to develop a personal relationship with God,</p>
-                        <p>to solidify their moral values and character, and to lead them to a deeper</p>
-                        <p>understanding of what it means to be rescued by our Savior, Jesus Christ.”</p>
-                        <h2>Conference Prayer</h2>
-                        <p>Heavenly Father, our Savior, we cry out to You with hearts ablaze, desperate for Your saving grace.</p> 
-                        <p>You have rescued us countless times — keep us yet again from the grip of evil, sin, and death that suffocates our lives.</p>  
-                        <p>Shake us awake, O Lord, and remind us that only through You can we be rescued and find eternal joy.  During this conference,</p> 
-                        <p>let us rise from those rescued to rescuers; let us storm the gates of despair. Help us to feed the hungry, shelter the homeless,</p> 
-                        <p>and clothe the naked.  Give us the strength to bring Your lost sheep home. For all this and the intercession of St. Bernard Menthon,</p>
-                        <p>who rescued so many, we pray in the name of Jesus Christ, our Lord, Amen.</p>
-                    </section>
+    <main>
+        <div class="full-width-container">
+            <div class="confined-text">
+                <section id="home">
+                    <h2>Mission Statement</h2>
+                    <p>“The mission of the Diocesan Youth Conference in 2025 is to</p>
+                    <p>inspire the youth of the diocese to develop a personal relationship with God,</p>
+                    <p>to solidify their moral values and character, and to lead them to a deeper</p>
+                    <p>understanding of what it means to be rescued by our Savior, Jesus Christ.”</p>
+                    <h2>Conference Prayer</h2>
+                    <p>Heavenly Father, our Savior, we cry out to You with hearts ablaze, desperate for Your saving grace.</p>
+                    <p>You have rescued us countless times — keep us yet again from the grip of evil, sin, and death that suffocates our lives.</p>
+                    <p>Shake us awake, O Lord, and remind us that only through You can we be rescued and find eternal joy. During this conference,</p>
+                    <p>let us rise from those rescued to rescuers; let us storm the gates of despair. Help us to feed the hungry, shelter the homeless,</p>
+                    <p>and clothe the naked. Give us the strength to bring Your lost sheep home. For all this and the intercession of St. Bernard Menthon,</p>
+                    <p>who rescued so many, we pray in the name of Jesus Christ, our Lord, Amen.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <section id="booklet">
+        <div class="full-width-header">
+            <h2>DYC Guide Booklet</h2>
+        </div>
+        <div class="full-width-container">
+            <div class="confined-text">
+                <div class="pdf-container">
+                    <canvas id="pdf-canvas"></canvas>
+                </div>
+                <div class="button-container">
+                    <button onclick="goToPreviousPage()">Previous</button>
+                    <button onclick="goToNextPage()">Next</button>
                 </div>
             </div>
-        </main>
+        </div>
+    </section>
 
-        <section id="Booklet">
-                <div class="full-width-header">
-                   <h2>DYC Guilde Booklet</h2>
+    <section id="rules">
+        <div class="full-width-header">
+            <h1>DYC Guidelines and Rules</h1>
+        </div>
+        <div class="full-width-container">
+            <div class="confined-text">
+                <h2>Rules Video</h2>
+                <div class="video-container">
+                    <iframe
+                        width="800"
+                        height="450"
+                        src="https://www.youtube.com/embed/T-LdS8uPaBg"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
                 </div>
-            
-                <div class="full-width-container">
-                    <div class="confined-text">
-                        <section id="booklet">
-                            <div class="pdf-container">
-                                <canvas id="pdf-canvas"></canvas>
-                            </div>
-                            <div class="button-container">
-                                <button onclick="goToPreviousPage()">Previous</button>
-                                <button onclick="goToNextPage()">Next</button>
-                            </div>                                                                                                        
-                        </section>
-                    </div>
-                </div>
-            </section>  
-
-        <section id="rules">
-            <div class="full-width-header">
-                <h1 id="rules-title">DYC Guidelines and Rules</h1>
             </div>
+        </div>
+    </section>
 
-            <main class="full-width-container">
-                <div class="confined-text">
-                    <section class="rules h2">
-                        <h2>Rules Video</h2>
-                    </section>
-                    <section id="rules-video">
-                        <div class="video-container">
-                            <iframe id="youtube-video" 
-                                width="800" 
-                                height="450"
-                                src="https://www.youtube.com/embed/T-LdS8uPaBg" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        
-                    </section>
-                </div>
-            </main>
-        </section>
+    <section id="guidelines">
+        <div class="full-width-header">
+            <h2>Guidelines for Engagement</h2>
+            <p>We encourage all members and followers to engage with us positively and respectfully. Please adhere to the following guidelines:</p>
+        </div>
+        <div class="full-width-container">
+            <div class="confined-text">
+                <ul class="center-text">
+                    <li><strong>Be Respectful:</strong> Treat others with kindness and respect in all interactions.</li>
+                    <li><strong>Stay on Topic:</strong> Keep discussions relevant to faith, youth engagement, and DYC activities.</li>
+                    <li><strong>Share Positivity:</strong> Share uplifting content that reflects our values and mission.</li>
+                    <li><strong>Report Concerns:</strong> If you see something inappropriate, report it to a DYC leader immediately.</li>
+                </ul>
+                <section class="get-involved">
+                    <h2>Get Involved!</h2>
+                    <p>Want to share your experiences or events with us? Use the hashtag <strong>#DYCYouth</strong> to join the conversation. We love to see your stories and how you are living out your faith!</p>
+                </section>
+            </div>
+        </div>
+    </section>
 
+    <footer class="confined-text">
+        <p>&copy; 2026 Diocesan Youth Council</p>
+    </footer>
 
-                    <section id="guidelines">
-                        <div class="full-width-header">
-                            <h2>Guidelines for Engagement</h2>
-                            <p>We encourage all members and followers to engage with us positively and respectfully. Please adhere to the following guidelines:</p>
-                        </div>
-                <main class="full-width-container">
-                        <ul class="center-text">
-                            <li><strong>Be Respectful:</strong> Treat others with kindness and respect in all interactions.</li>
-                            <li><strong>Stay on Topic:</strong> Keep discussions relevant to faith, youth engagement, and DYC activities.</li>
-                            <li><strong>Share Positivity:</strong> Share uplifting content that reflects our values and mission.</li>
-                            <li><strong>Report Concerns:</strong> If you see something inappropriate, report it to a DYC leader immediately.</li>
-                        </ul>
-                    </section>
-                    <section class="get-involved">
-                        <h2>Get Involved!</h2>
-                        <p>Want to share your experiences or events with us? Use the hashtag </p>
-                        <p><strong>#DYCYouth</strong> </p>
-                        <p>to join the conversation. We love to see your stories and how you are living out your faith!</p>
-                    </section>
-                </main>
-                </div>
-            </main>
-        </section>
-
-        <footer class="confined-text">
-            <p>&copy; 2026 Diocesan Youth Council</p>
-        </footer>
-
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
+
